@@ -3,72 +3,27 @@ import Cookie from "./lib/Cookie";
 import MoveElement from "./lib/MoveElement"
 
 const toggleMenuMobile = () => {
-	$(".header-container__toggle-menu").on("click", function() {
+	$(".toggle-menu.mobile").on("click", function() {
 		$(this).toggleClass("active");
 		$(this).siblings(".navbar-collapse").toggleClass("active");
 		$("body").toggleClass("disabled");
 	});
 };
 
-//Header when scroll
-const activeHeaderWhenScroll = () => {
-	const heightHeader = document.querySelector("header").offsetHeight;
-	window.addEventListener("scroll", function() {
-		if (window.pageYOffset >= heightHeader) {
-			document.querySelector("header").classList.add("header-croll-down");
-		} else {
-			document.querySelector("header").classList.remove("header-croll-down");
-		}
-	});
-};
-
 
 // Home banner
-function dnnBannerSlide() {
-	var swiperhomebanner = new Swiper('.dnn-home-banner__slide', {
+function homeBanner() {
+	var swiper = new Swiper('.banner-main', {
 		loop: true,
 		speed: 1000,
 		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false
+			delay: 2000,
+			disableOnInteraction: false,
 		},
-		grabCursor: true,
-		watchSlidesProgress: true,
-		mousewheelControl: true,
-		keyboardControl: true,
 		navigation: {
-			nextEl: ".dnn-home-banner__slide .swiper-button-next",
-			prevEl: ".dnn-home-banner__slide .swiper-button-prev",
-			type: "bullets",
-			clickable: true
+			nextEl: '.banner-main .swiper-button-next',
+			prevEl: '.banner-main .swiper-button-prev',
 		},
-		on: {
-			progress: function() {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					var slideProgress = swiper.slides[i].progress;
-					var innerOffset = swiper.width * 0.5;
-					var innerTranslate = slideProgress * innerOffset;
-					swiper.slides[i].querySelector(".swiper-inner").style.transform =
-						"translate3d(" + innerTranslate + "px, 0, 0)";
-				}
-			},
-			touchStart: function() {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = "";
-				}
-			},
-			setTransition: function(speed) {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = speed + "ms";
-					swiper.slides[i].querySelector(".swiper-inner").style.transition =
-						speed + "ms";
-				}
-			}
-		}
-
 	})
 }
 
@@ -613,7 +568,7 @@ function setBackground() {
 		var background = $(this).attr("setBackgroundRepeat");
 		$(this).css({
 			"background-image": "url(" + background + ")",
-			"background-repeat": "no-repeat",
+			"background-repeat": "repeat",
 		});
 	});
 }
@@ -659,8 +614,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
 	Cookie();
 	new WOW().init();
-	dnnBannerSlide();
-	activeHeaderWhenScroll();
+	homeBanner();
 	coutingNumber();
 	toggleMenuMobile();
 	productHomeSlide();
