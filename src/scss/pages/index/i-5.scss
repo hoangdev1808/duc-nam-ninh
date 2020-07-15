@@ -1,0 +1,278 @@
+.tbl-home-4 {
+	padding-top: 0;
+	width: 100%;
+	margin-left: auto;
+	.box-left {
+		width: 100%;
+		height: 600px;
+		margin-top: 50px;
+		padding: 0;
+		background-image: linear-gradient(170deg, rgb(203, 248, 255) 55%, rgb(0, 162, 232) 99%);
+
+		.block__content {
+			margin-top: 50px;
+			margin-left: auto;
+			width: 615px;
+
+			.block__description {
+				width: 480px;
+				margin-left: 75px;
+				padding-top: 70px;
+				.block__img {
+					width: 269px;
+					height: 57px;
+					margin-bottom: 30px;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				
+				h5 {
+					font-size: 14px;
+					font-family: "Barlow";
+					color: rgb(51, 51, 51);
+					font-weight: bold;
+					line-height: 1.429;
+					text-transform: uppercase;
+				}
+				p {
+					font-size: 14px;
+					font-weight: 400;
+					font-family: "Barlow";
+					line-height: 1.429;
+					color: rgb(51, 51, 51);
+				}
+			}
+
+			.block__btn {
+				text-align: left;
+				margin-top: 30px;
+
+				.btn__new {
+					color: #fff;
+					&:hover{
+						color: $main-color;
+						background-color: #fff;
+					}
+				}
+			}
+
+			.vaxtor-slide {
+				position: relative;
+				width: 600px;
+				.vaxtor__pro {
+					margin-top: 30px;
+
+					.swiper-slide{
+						max-width: 180px;
+						height: 200px;
+						background-color: rgb(255, 255, 255);
+						box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+						text-align: center;
+						display: flex;
+						flex-direction: column;
+						align-content: space-between;
+						justify-content: space-between;
+						.img {
+							width: 100%;
+							height: 112px;
+							padding-top: 20px;
+							img{
+								height: 90%;
+								object-fit: cover;
+							}
+						}
+
+						.img__name {
+							padding: 20px;
+							max-height: 50px;
+							text-align: center;
+							overflow: hidden;
+							display: -webkit-box;
+							text-overflow: ellipsis;
+							-webkit-box-orient: vertical;
+							-webkit-line-clamp: 2;
+							a {
+								font-size: 14px;
+								font-family: "Barlow";
+								color: rgb(15, 105, 171);
+								font-weight: bold;
+							}
+						}
+						@media(max-width: 1024px) {
+							.img {
+								width: 100%;
+							}
+						}
+
+					}
+					@media screen and ( max-width: 1024px){
+						width: 100%;
+					}
+				}
+
+				.swiper-button-next {
+					position: absolute;
+					left:-75px;
+					top: 40%;
+					width: 40px;
+					height: 40px;
+					border: none;
+					transform: translateY(-50%);
+					background-color: rgba(15, 105, 171, 0.8);
+					&::after {
+						width: 100%;
+						height: 100%;
+						content: '';
+						background-image: url('../assets/icons/next.png');
+						background-repeat: no-repeat;
+						background-position: center;
+						text-align: center;
+						transition: .4s all ease-in-out;
+					}
+
+					@media screen and ( max-width: 1024px){
+						left: 0;
+					}
+				}
+
+				.swiper-button-prev {
+					position: absolute;
+					left: -75px;
+					top: 61%;
+					width: 40px;
+					height: 40px;
+					border: none;
+					transform: translateY(-50%);
+					background-color: rgba(15, 105, 171, 0.8);
+
+					&::after {
+						width: 100%;
+						height: 100%;
+						content: '';
+						background-image: url('../assets/icons/prev.png');
+						background-repeat: no-repeat;
+						background-position: center;
+						text-align: center;
+						transition: .4s all ease-in-out;
+					}
+					@media screen and ( max-width: 1024px){
+						left: 0;
+					}
+				}
+				@media screen and ( max-width: 1024px){
+					width: 100%;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-bottom: 30px;
+					.vaxtor__pro{
+						margin-top: 0;
+						.swiper-slide{
+							max-width: unset;
+						}
+					}
+				}
+			}
+			@media screen and ( max-width: 1024px){
+				margin-top: 0;
+				width: 100%;
+				height: auto;
+				.block__description{
+					width: 100%;
+					margin-left: 0;
+					padding: 30px 15px;
+				}
+			}
+		}
+		@media screen and ( max-width: 1024px){
+			height: auto;
+			margin-top: 0;
+		}
+	}
+
+	.video__slide {
+		position: relative;
+		display: block;
+		padding: 0;
+		height: 650px;
+		.ModuleContent{
+			height: 100%;
+		}
+
+		.nx-software {
+			position: relative;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+
+			.swiper-slide {
+				width: 100%;
+			}
+
+			.block__img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				.block__icon {
+					position: absolute;
+					width: 80px;
+					height: 80px;
+					top: 51%;
+					left: 40%;
+					transform: translate(-50%, -50%);
+					z-index: 2;
+					@media screen and ( max-width: 1025px){
+						left: 50%;
+						top: 50%;
+					}
+				}
+			}
+		}
+		.swiper-button-next {
+			position: absolute;
+			right: 20%;
+			top: 51%;
+			@media screen and ( min-width: 1200px){
+				right: 8%;
+			}
+			&::after {
+				width: 100%;
+				height: 100%;
+				content: '';
+				background-image: url('../assets/icons/next-gray.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				text-align: center;
+				transition: .4s all ease-in-out;
+			}
+		}
+		.swiper-button-prev {
+			position: absolute;
+			left: 30px;
+			top: 51%;
+			&::after {
+				width: 100%;
+				height: 100%;
+				content: '';
+				background-image: url('../assets/icons/prev-gray.png');
+				background-repeat: no-repeat;
+				background-position: center;
+				text-align: center;
+				transition: .4s all ease-in-out;
+			}
+		}
+		@media screen and ( max-width: 1024px){
+			height: auto;
+		}
+	}
+}
