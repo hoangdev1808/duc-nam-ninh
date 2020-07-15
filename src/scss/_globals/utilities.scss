@@ -130,7 +130,7 @@ textarea {
 		-webkit-line-clamp: 4;
 	}
 }
-.block-section{
+.section{
 	margin-left: auto;
 	padding: 20px 0;
 	@media (min-width: 600px){
@@ -150,13 +150,12 @@ textarea {
 	}
 
 }
-.block__title {
+.section__title {
 	padding-top: 0;
 	margin-bottom: 40px;
 	h3{
-		font-size: 40px;
+		font-size: 36px;
 		font-family: "Barlow";
-		color: rgb(15, 105, 171);
 		font-weight: bold;
 		@media(max-width: 1025px){
 			font-size: 20px;
@@ -166,83 +165,77 @@ textarea {
 		margin-bottom: 20px;
 	}
 }
-@media(max-width: 991.98px){
-	.swiper-button-next,
-	.swiper-button-prev{
-		display: none;
-	}
-}
-.swiper-button-next{
-	position: absolute;
-	right: -60px;
-	top: 50%;
-	width: 40px;
-	height: 40px;
-	border: solid 1px #999999;
-	transform: translateY(-3%);
-	background-image: none;
-	&::after{
-		top: 0;
-		left: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		content: '\f105';
-		font-family: "FontAwesome";
-		font-size: 30px;
-		font-weight: 400;
-		color: #999999;
-		text-align: center;
-		transition: .4s all ease-in-out;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	@media(min-width: 1024px){
-		&:hover{
-			&::after{
-				background-color: rgba(15,105,171,0.8);
-				color: #fff;
-				border: none;
-			}
-		}
-	}
-}
-.swiper-button-prev{
-	position: absolute;
-	left: -60px;
-	top: 50%;
-	width: 40px;
-	height: 40px;
-	border: solid 1px #999999;
-	transform: translateY(-3%);
-	background-image: none;
-	&::after{
-		top: 0;
-		left: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		content: '\f104';
-		font-family: 'FontAwesome';
-		font-size: 30px;
-		color: #999999;
-		text-align: center;
-		transition: .4s all ease-in-out;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	@media(min-width: 1024px){
-		&:hover{
-			&::after{
-				background-color: rgba(15,105,171,0.8);
-				color: #fff;
-				border: none;
-			}
-		}
-	}
-}
+// .swiper-button-next{
+// 	position: absolute;
+// 	right: -60px;
+// 	top: 50%;
+// 	width: 40px;
+// 	height: 40px;
+// 	border: solid 1px #999999;
+// 	transform: translateY(-3%);
+// 	background-image: none;
+// 	&::after{
+// 		top: 0;
+// 		left: 0;
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		content: '\f105';
+// 		font-family: "FontAwesome";
+// 		font-size: 30px;
+// 		font-weight: 400;
+// 		color: #999999;
+// 		text-align: center;
+// 		transition: .4s all ease-in-out;
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 	}
+// 	@media(min-width: 1024px){
+// 		&:hover{
+// 			&::after{
+// 				background-color: rgba(15,105,171,0.8);
+// 				color: #fff;
+// 				border: none;
+// 			}
+// 		}
+// 	}
+// }
+// .swiper-button-prev{
+// 	position: absolute;
+// 	left: -60px;
+// 	top: 50%;
+// 	width: 40px;
+// 	height: 40px;
+// 	border: solid 1px #999999;
+// 	transform: translateY(-3%);
+// 	background-image: none;
+// 	&::after{
+// 		top: 0;
+// 		left: 0;
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		content: '\f104';
+// 		font-family: 'FontAwesome';
+// 		font-size: 30px;
+// 		color: #999999;
+// 		text-align: center;
+// 		transition: .4s all ease-in-out;
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 	}
+// 	@media(min-width: 1024px){
+// 		&:hover{
+// 			&::after{
+// 				background-color: rgba(15,105,171,0.8);
+// 				color: #fff;
+// 				border: none;
+// 			}
+// 		}
+// 	}
+// }
 .bg-while{
 	background-color: #fff;
 }
@@ -502,44 +495,6 @@ textarea {
 					max-width: 100%;
 					.panel__img{
 						max-width: 100%;
-					}
-				}
-			}
-			.swiper-button-next{
-				right: 30px;
-				&::after {
-					width: 100%;
-					height: 100%;
-					content: '';
-					background-image: url('../assets/icons/next-gray.png');
-					background-repeat: no-repeat;
-					background-position: center;
-					text-align: center;
-					transition: .4s all ease-in-out;
-				}
-				&:hover{
-					&::after{
-						background-image: url('../assets/icons/next-blue.png');
-						background-color: transparent;
-					}
-				}
-			}
-			.swiper-button-prev{
-				left: 30px;
-				&::after {
-					width: 100%;
-					height: 100%;
-					content: '';
-					background-image: url('../assets/icons/prev-gray.png');
-					background-repeat: no-repeat;
-					background-position: center;
-					text-align: center;
-					transition: .4s all ease-in-out;
-				}
-				&:hover{
-					&::after{
-						background-image: url('../assets/icons/prev-blue.png');
-						background-color: transparent;
 					}
 				}
 			}
