@@ -1,14 +1,27 @@
-section.block-section.about-4.wow.fadeInDown(data-wow-delay=".3s")
+<!-- Thông điệp -->
+section.dnn-about5.section
 	.container
-		.about-4__content
-			.block__title.text-center.text-uppercase
-				h3 khách hàng
-			.logo-block-slide.customer
-				.swiper-container.customer__slide
+		.row
+			.col-xl-6.col-md-6
+				.swiper-container.dnn-about5__slide
 					.swiper-wrapper
-						-for(i=1; i<7; i++)
-							.swiper-slide
-								.logo__image
-									img(src="./assets/images/about/logo-cus-"+i+".png", alt="")
-				.swiper-button-next
-				.swiper-button-prev
+						.swiper-slide
+									.dnn-about5__slide__img
+										img(src="./assets/images/about/ab-4.png", alt="")
+					.swiper-button-next
+					.swiper-button-prev
+			.col-xl-6.col-md-6
+				.dnn-about5__slide__content
+					.block-title
+						h1 Máy móc thiết bị
+					.dnn-about5__slide__content__desc
+						p Máy in Canon
+						ul
+							li
+								p Sử dụng để in ấn tài liệu và in gia công lên sản phẩm
+							li
+								p Số lượng: 4 máy
+							li
+								p Xuất xứ: Trung Quốc
+
+

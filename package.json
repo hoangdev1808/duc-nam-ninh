@@ -36,7 +36,8 @@
     "fibers": "^5.0.0",
     "graceful-fs": "^4.2.4",
     "gulp-rename": "^2.0.0",
-    "material-icons": "^0.3.1"
+    "material-icons": "^0.3.1",
+    "remixicon": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

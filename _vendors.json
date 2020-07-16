@@ -1,6 +1,7 @@
 {
 	"fonts": [
 		"node_modules/@mdi/font/fonts/**"
+
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.js",

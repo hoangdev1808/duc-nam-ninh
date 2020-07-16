@@ -15,7 +15,9 @@ import cssSort from 'css-declaration-sorter';
 const cssTask = () => {
 	return src([
 			'src/scss/**.scss',
-			'!src/scss/\_*.scss'
+			'!src/scss/\_*.scss',
+			'src/scss/**.sass',
+			'!src/scss/\_*.sass'
 		])
 		.pipe(wait(400))
 		.pipe(sourcemap.init())
