@@ -18,12 +18,19 @@
 		border-radius: 5px;
 		transform: skewX(-20deg);
 		transition: .3s all ease-in-out;
+		display: flex;
+		align-items: center;
 		// &:hover {
 		// 	background-color: $main-color;
 		// 	color: #fff;
 		// }
 		span{
 			transform: skewX(20deg);
+			.ri-arrow-right-line{
+				font-size: 14px;
+				line-height: 20px;
+				padding-left: 10px;
+			}
 		}
 		@media(max-width: 991.98px) {
 			width: 120px;

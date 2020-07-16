@@ -1,0 +1,22 @@
+.dnn-home-3{
+	background-color: #f5f5f5;
+	.block-title{
+		text-align: center;
+	}
+	&__slide-home-pro{
+		position: relative;
+		.home-pro{
+			&__img{
+				width: 285px;
+				height: 220px;
+				background-color: $color-while;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		.btn__new{
+			margin-top: 37px;
+		}
+	}
+}
