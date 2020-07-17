@@ -52,7 +52,8 @@ const server = () => {
 	], series(pugTask));
 
 	watch([
-		"src/scss/**/**.scss"
+		"src/scss/**/**.scss",
+		"src/sass/**/**.sass"
 	], series(cssTask));
 
 	watch([

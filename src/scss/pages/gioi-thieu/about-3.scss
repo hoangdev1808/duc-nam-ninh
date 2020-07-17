@@ -1,128 +1,51 @@
-.about-3 {
-	position: relative;
-	width: 100%;
-	padding-top: 0;
-
-	.list-partner {
-		width: 100%;
-		padding-bottom: 25px;
-
-		.item-partner {
-			width: 350px;
-			position: relative;
-
-			.item__image {
-				background-color: rgb(245, 245, 245);
-				height: 150px;
-				padding: 40px 0;
-				text-align: center;
+.dnn-about3{
+	background-image: url('../assets/images/about/ab-2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__content{
+		.block-title{
+			text-align: center;
+			h1{
+				color: $color-while;
 			}
-
-			.item__desc {
-				padding: 30px 0;
-
-				h5 {
-					font-size: 18px;
-					color: rgb(51, 51, 51);
-					font-weight: bold;
-					text-transform: uppercase;
+		}
+		&__item{
+			background-color: $color-while;
+			width: 285px;
+			height: 300px;
+			padding-top: 30px;
+			&__img{
+				position: relative;
+				width: 100%;
+				padding-bottom: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				justify-items: center;
+				&::after{
+					position: absolute;
+					width: 80px;
+					height: 1px;
+					background-color: $main-color;
+					content: '';
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
 				}
-				p {
+			}
+			&__desc{
+				width: 100%;
+				padding-top: 20px;
+				padding-left: 55px;
+				padding-right: 55px;
+				text-align: center;
+				p{
 					font-size: 16px;
-					font-family: "Barlow";
-					color: rgb(51, 51, 51);
-					font-weight: 400;
-					text-transform: uppercase;
+					font-family: "Montserrat";
+					color: $color-main;
+					line-height: 1.2;
+					text-align: center;
 				}
-
-				@media(max-width: 991.98px) {
-					.item__image {
-						max-width: 100%;
-					}
-
-					.item__desc {
-						text-align: center;
-						padding: 15px 0;
-					}
-				}
-			}
-			@media screen and ( max-width: 1025px){
-				width: 100%;
-			}
-		}
-		@media (min-width: 600px){
-			padding-bottom: 30px;
-		}
-		@media (min-width: 768px){
-			padding-bottom: 35px;
-		}
-		@media (min-width: 1025px){
-			padding-bottom: 40px;
-		}
-		@media (min-width: 1200px){
-			padding-bottom: 50px;
-		}
-		@media (min-width: 1438px){
-			padding-bottom: 80px;
-		}
-	}
-	.logo-block-slide{
-		position: relative;
-		.partner__slide{
-			.logo__image{
-				width: 180px;
-				height: 180px;
-				border: solid 1px #e7e7e7;
-				img{
-					width: 50%;
-				}
-				&:hover{
-					border: solid 1px rgb(118, 198, 239);
-				}
-			}
-		}
-		.swiper-button-next{
-			&::after {
-				width: 100%;
-				height: 100%;
-				content: '';
-				background-image: url('../assets/icons/next-gray.png');
-				background-repeat: no-repeat;
-				background-position: center;
-				text-align: center;
-				transition: .4s all ease-in-out;
-			}
-			&:hover{
-				&::after{
-					background-image: url('../assets/icons/next-blue.png');
-					background-color: transparent;
-				}
-			}
-		}
-		.swiper-button-prev{
-			&::after {
-				width: 100%;
-				height: 100%;
-				content: '';
-				background-image: url('../assets/icons/prev-gray.png');
-				background-repeat: no-repeat;
-				background-position: center;
-				text-align: center;
-				transition: .4s all ease-in-out;
-			}
-			&:hover{
-				&::after{
-					background-image: url('../assets/icons/prev-blue.png');
-					background-color: transparent;
-				}
-			}
-		}
-		@media(max-width: 1200px){
-			.swiper-button-next{
-				right: 0;
-			}
-			.swiper-button-prev{
-				left: 0;
 			}
 		}
 	}

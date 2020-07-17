@@ -1,0 +1,62 @@
+.dnn-home8{
+	width: 100%;
+	max-height: 340;
+	background-image: url('../assets/images/banner/bg-home8.png');
+	background-size: cover;
+	background-position: center;
+	&__content{
+		&__img{
+			width: 390px;
+			min-height: 220px;
+			background-color: $color-while;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__desc{
+			position: relative;
+			display: flex;
+			.simple{
+				font-size: 200px;
+				font-family: "K2D";
+				color: rgba(255, 255, 255, 0.149);
+				line-height: 1.2;
+				margin-top: -60px;
+			}
+			span{
+				margin-top: 25px;
+				font-size: 24px;
+				font-family: "Montserrat";
+				color: rgb(255, 255, 255);
+				font-style: italic;
+				line-height: 1.25;
+				text-align: left;
+			}
+			&__supdesc{
+				float: right;
+				text-align: right;
+				p{
+					position: relative;
+					font-size: 16px;
+					font-family: "Montserrat";
+					color: rgb(255, 255, 255);
+					line-height: 1.375;
+					&:first-child{
+						&::before{
+							position: absolute;
+							content: '';
+							width: 80px;
+							height: 1px;
+							top: 50%;
+							left: 40%;
+							transform: translateX(-50%);
+							background-color: rgb(255, 255, 255);
+							opacity: 0.502;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}

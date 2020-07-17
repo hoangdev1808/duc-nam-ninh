@@ -1,66 +1,50 @@
-section.block-section.tbl-product.wow.fadeInDown(data-wow-delay=".3s")
+section.dnn-list-pro2.section
 	.container
-		.block__title.text-uppercase.text-center
-			h3 máy in
-		.block__filter
-			h4 BỘ LỌC
-			.filter__icon
-				i.fa.fa-filter
-			ul.nav
-				#div
-				li.nav-item
-					.form-group
-						input#radio1(type='radio', name='radio-group', checked='')
-						label(for='radio1') Mới nhất
-				li.nav-item
-					.form-group
-						input#radio2(type='radio', name='radio-group')
-						label(for='radio2') Bán chạy nhất
-				li.nav-item
-					.form-group
-						input#radio3(type='radio', name='radio-group')
-						label(for='radio3') Giá tăng dần
-				li.nav-item
-					.form-group
-						input#radio4(type='radio', name='radio-group')
-						label(for='radio4') Giá giảm dần
-		.fillter
-			li.nav-item
-				.form-group.nice-select(tabindex='0')
-					span Thương Hiệu:
-					span.current Tất cả
-					ul.list
-						li.option.selected.focus(data-value='Tất cả')
-							a(href="") Tất cả
-						li.option(data-value='Thương hiệu 1')
-							a(href="") Thương hiệu 1
-						li.option(data-value='Thương hiệu 2')
-							a(href="") Thương hiệu 2
-		.list-product
+		.block-title
+			h1 Sản phẩm
+		.dnn-list-pro2__content
 			.row
-				-for(i=1; i<17; i++)
-					.col-lg-3.col-md-4.col-sm-6
-						.product__item
-							.product__image
+				.col-xl-3.col-md-4.dnn-list-pro2__content__left
+					.dnn-list-pro2__content__left__title
+						h2 Danh sách sản phẩm
+					.dnn-list-pro2__content__left__list
+						ul
+							li.active
+								a(href="") Bếp gas
+							li
+								a(href="") Bi nghiền
+							li
+								a(href="") Nắp hố gas
+							li
+								a(href="") Máy công trình
+							li
+								a(href="") Bích nối
+							li
+								a(href="") Khuôn cát nhựa
+							li
+								a(href="") Xây dung
+							li
+								a(href="") Thiết bị kiểm tra
+							li
+								a(href="") Sản phẩm khác
+				.col-xl-9.col-md-8.dnn-list-pro2__content__right
+					.col-md-8.dnn-list-pro2__content__right__title
+						h2 Bếp gas
+					.row
+						-for(i=1; i<10; i++)
+							.col-md-4.dnn-list-pro2__content__right__item
 								a(href="chi-tiet-san-pham.html")
-									img(src="./assets/images/product/p-"+i+".png", alt="")
-							.product__desc
-								.product__name
-									a(href="chi-tiet-san-pham.html") Máy in Laser BROTHER HL- L2321D - In đảo mặt tự động
-								.product__infor
-									.product__price
-										p.sale  2.699.000đ
-										p.promotion 3.000.000đ
-									.icon
-										a(href="") 
-											span.lnr.lnr-cart
-		.pages
-			.modulepager
-				ul.pagination
-					li.active
-						a(href="#") 1
-					li
-						a(href="#") 2
-					li
-						a(href="#") 3
-
+									.dnn-list-pro2__content__right__item__img
+										img(src="./assets/images/product/pro-"+i+".png" alt="")
+									.dnn-list-pro2__content__right__item__desc
+										p Sản phẩm bếp gas
+										em.ri-arrow-right-line
+					.pages
+						.modulepager
+							ul.pagination
+								li.active
+									a(href="#") 1
+								li
+									a(href="#") 2
+								li
+									a(href="#") 3

@@ -32,7 +32,7 @@ const activeHeaderWhenScroll = () => {
 		}
 	});
 };
-
+//Slide apply on site
 function dnnBannerSlide() {
 	// Home banner
 	var swiperhomebanner = new Swiper('.dnn-home-banner__slide', {
@@ -146,7 +146,6 @@ function coutingNumber() {
 			},
 			complete: function() {
 				$this.text(this.countNum);
-				//alert('finished');
 			}
 
 		});

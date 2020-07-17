@@ -441,7 +441,6 @@ textarea {
 			list-style: none;
 
 			li {
-				border: solid 1px rgb(2, 103, 177);
 				background-color: rgb(255, 255, 255);
 				width: 38px;
 				height: 38px;
@@ -454,8 +453,9 @@ textarea {
 
 				a {
 					font-size: 18px;
-					color: rgb(2, 103, 177);
+					color: $main-color;
 					text-decoration: none;
+					font-family: 'Montserrat';
 				}
 
 				&:hover {
@@ -466,13 +466,12 @@ textarea {
 					}
 				}
 
-				&.active {
-					span {
-						color: #fff;
-					}
-
-					background-color: $main-color
-				}
+				// &.active {
+				// 	span {
+				// 		color: #fff;
+				// 	}
+				// 	background-color: $main-color
+				// }
 			}
 		}
 	}
