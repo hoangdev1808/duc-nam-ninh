@@ -1006,6 +1006,7 @@ textarea {
 				color: $color-while;
 				&:focus{
 					outline: none;
+					box-shadow: none;
 				}
 				&::placeholder{
 					color: $color-while;

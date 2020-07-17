@@ -1,49 +1,56 @@
-section.block-section.tbl-pro-detail1.wow.fadeInDown(data-wow-delay=".3s")
+section.dnn-detail1.section.wow.fadeInDown(data-wow-delay=".3s")
 	.container
-		.tbl-pro-detail1__content
+		.dnn-detail1__content
 			.row
 				.col-md-8
-					.product-slide
-						.swiper-container.gallery-top
+					.dnn-detail1__content__slide
+						.swiper-container.dnn-detail1__content__slide__gallery-top
 							.swiper-wrapper
 								-for(i=1; i<4; i++)
 									.swiper-slide
-										img(src="./assets/images/product/pro-ct-"+i+".png", alt="")
-						.thumb
-							.swiper-container.gallery-thumbs
-								.swiper-wrapper
-									-for(i=1; i<4; i++)
-										.swiper-slide
-											img(src="./assets/images/product/pro-ct-"+i+".png", alt="")
-							.swiper-button-next
-							.swiper-button-prev
+										img(src="./assets/images/product/detail-"+i+".png", alt="")
+						.swiper-container.dnn-detail1__content__slide__gallery-thumbs
+							.swiper-wrapper
+								-for(i=1; i<4; i++)
+									.swiper-slide
+										img(src="./assets/images/product/detail-"+i+".png", alt="")
+						.swiper-button-next
+						.swiper-button-prev
 				.col-md-4
-					.product__detail
-						.product__name
-							a(href="") Máy in mã vạch ZEBRA GC420T 203DPI
-						.product__price
-							span.sale  2.699.000đ
-							span.promotion 3.000.000đ
-						.product__desc
+					.dnn-detail1__content__product-detail
+						.block-title
+							h1 Bi nghiền B - 310
+						.table-responsive
+							table.table
+								tbody
+									tr
+										th(scope='row') Mã sản phẩm
+										td B - 310
+									tr
+										th(scope='row') Màu sắc
+										td Xám
+									tr
+										th(scope='row') Chất liệu
+										td Sắt
+									tr
+										th(scope='row') Kích thước
+										td 0.5cm - 2cm
+									tr
+										th(scope='row') Độ cứng
+										td 58 - 64 (HRc)
+									tr
+										th(scope='row') Trọng lượng
+										td 0.050kg/viên
+									tr
+										th(scope='row') Tình trạng
+										td Hàng có sẵn
+						.dnn-detail1__content__product-detail__contact
+							a.btn.btn__contact(href="") Liên hệ
 							ul
 								li
-									p Công nghệ in
-									span direct thermal/thermal transfer
+									a(href="")
+										i.fa.fa-twitter
 								li
-									p Độ phân giải
-									span 203 dpi (8 dots/mm) 4" (102 mm)
-								li
-									p Tốc độ in tối đa
-									span 4" (102 mm)
-								li
-									p Trọng lượng
-									span 3.2 lbs (1.5 kg)
-								li
-									p Bảo hành
-									span 12 Tháng
-								li
-									p Độ dài cuộn mực
-									span 244' (74 m)
-						.block__btn
-							a.btn.btn__new(href="") mua ngay
+									a(href="")
+										i.fa.fa-facebook-f
 
