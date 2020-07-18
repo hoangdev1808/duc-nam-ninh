@@ -2,6 +2,7 @@ import Loading from "./lib/Loading";
 import Cookie from "./lib/Cookie";
 import MoveElement from "./lib/MoveElement"
 
+//Toggle menu mobile
 const toggleMenuMobile = () => {
 	$(".header-container__toggle-menu").on("click", function() {
 		$(this).toggleClass("active");
@@ -15,7 +16,7 @@ function moveNav() {
 	if ($(window).width() <= 1024.98) {
 		$('.language').appendTo('.header-container #div-mobile');
 		$('.search').appendTo('.header-container #div-mobile')
-	}else{
+	} else {
 		$('.language').appendTo('.nav-item #language-desktop');
 		$('.search').appendTo('.nav-item #search-desktop');
 	}
@@ -119,13 +120,36 @@ function dnnBannerSlide() {
 			prevEl: '.dnn-about5__slide .swiper-button-prev',
 		},
 	});
+	//Slide prodcut detail
+	var galleryTop = new Swiper('.dnn-detail1__content__slide .dnn-detail1__content__slide__gallery-top', {
+		spaceBetween: 10,
+		loop: true,
+		loopedSlides: 4
+	});
+	var galleryThumbs = new Swiper('.thumbs .dnn-detail1__content__slide__gallery-thumbs', {
+		spaceBetween: 10,
+		centeredSlides: true,
+		slidesPerView: '5',
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		loop: true,
+		loopedSlides: 5,
+		navigation: {
+			nextEl: '.thumbs .swiper-button-next',
+			prevEl: '.thumbs .swiper-button-prev',
+		},
+	});
+	galleryTop.controller.control = galleryThumbs;
+	galleryThumbs.controller.control = galleryTop;
 }
 
 //Click croll down in banner
-function bannerCrollDown(){
+function bannerCrollDown() {
 	$('.crolldown').on('click', function(e) {
-	e.preventDefault();
-	$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $($(this).attr('href')).offset().top
+		}, 500, 'linear');
 	});
 }
 
@@ -261,7 +285,10 @@ const checkLayoutBanner = () => {
 	const breadcrumb = $('.global-breadcrumb');
 	const heightHeader = $("header").outerHeight();
 	if (pagesBanner.length < 1) {
-		$("header").css({"margin-top": "0", "background-color": "#fff"});
+		$("header").css({
+			"margin-top": "0",
+			"background-color": "#fff"
+		});
 		breadcrumb.css("padding-top", heightHeader);
 	}
 };
@@ -285,11 +312,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	moveNav();
 	checkLayoutBanner();
 });
-$(window).resize(function(){
+$(window).resize(function() {
 	if ($(window).width() <= 1024) {
 		$('.language').appendTo('.header-container #div-mobile');
 		$('.search').appendTo('.header-container #div-mobile')
-	}else{
+	} else {
 		$('.language').appendTo('.nav-item #language-desktop');
 		$('.search').appendTo('.nav-item #search-desktop');
 	}

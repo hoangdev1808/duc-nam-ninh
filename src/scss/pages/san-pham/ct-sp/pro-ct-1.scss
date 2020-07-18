@@ -5,141 +5,141 @@
 		padding-top: 40px;
 
 		&__slide {
-			position: relative;
-			height: 475px;
+			height: 400px;
 
 			&__gallery-top {
 				width: 100%;
 				height: 100%;
 
 				.swiper-slide {
-					overflow: hidden;
-					display: flex;
-					align-items: center;
-					justify-content: center;
+					cursor: pointer;
 					background-color: rgb(255, 255, 255);
 
 					img {
-						width: 75%;
-					}
-
-					@media(max-width: 991.98px) {
-						img {
-							width: 50%;
-						}
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
 					}
 				}
 
+			}
+			&__gallery-thumbs{
+				overflow: hidden;
+				margin-top: 10px;
+				.swiper-slide{
+					cursor: pointer;
+					background-color: rgb(255, 255, 255);
+					height: 80px;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+		.thumbs{
+			position: relative;
+			.swiper-button-next{
+				background-image: none;
+				right: -40px;
+				display: flex;
+				align-items: center;
+				&::after{
+					content: 'arrow_forward_ios';
+					font-family: 'Material Icons';
+					font-size: 18px;
+					font-weight: 400;
+					color: $color-main;
+				}
+			}
+			.swiper-button-prev{
+				background-image: none;
+				left: -30px;
+				display: flex;
+				align-items: center;
+				&::after{
+					content: 'arrow_back_ios';
+					font-family: 'Material Icons';
+					font-size: 18px;
+					font-weight: 400;
+					color: $color-main;
+				}
 			}
 		}
 
-		.product__detail {
-			padding: 30px;
+		&__product-detail {
+			padding-left: 55px;
 			height: 100%;
-			background-color: #fff;
-
-			.product__name {
-				a {
+			.block-title{
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #111111;
+				h1{
 					font-size: 24px;
+					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
 					font-weight: bold;
-
-				}
-			}
-
-			.product__price {
-				padding-bottom: 20px;
-				border-bottom: solid 1px rgb(225, 225, 225);
-
-				.sale {
-					font-size: 22px;
-					color: rgb(2, 103, 177);
-					text-align: left;
-					margin-right: 30px;
-				}
-
-				.promotion {
-					font-size: 18px;
-					color: rgb(153, 153, 153);
-					text-decoration: line-through;
+					line-height: 1.2;
 					text-align: left;
 				}
 			}
-
-			.product__desc {
-				padding-top: 20px;
-
-				table {
-					width: 100%;
-
-					tbody {
-						tr {
-							td {
-								padding-bottom: 15px;
-
-								&:last-child {
-									float: right;
-								}
+			.table-responsive{
+				.table{
+					margin-bottom: 50px;
+					tbody{
+						tr{
+							height: 50px;
+							th{
+								font-size: 16px;
+								font-family: "Montserrat";
+								color: rgb(51, 51, 51);
+								font-weight: bold;
+								text-align: left;
+								padding-left: 0;
+							}
+							td{
+								font-size: 16px;
+								font-family: "Montserrat";
+								color: rgb(51, 51, 51);
+								text-align: left;
 							}
 						}
 					}
 				}
-
-				ul {
-					padding: 0;
+				.table td,
+				.table th{
+					border-top: none;
+					border-bottom: 1px solid #dee2e6;
+				}
+			}
+			&__contact{
+				display: flex;
+				align-items: center;
+				.btn__contact{
+					background-color: $main-color;
+					width: 207px;
+					height: 40px;
+					border-radius: 0;
+					color: $color-while;
+					font-size: 18px;
+					font-family: "Montserrat";
+					line-height: 1.2;
+					text-align: center;
+				}
+				ul{
 					list-style: none;
-
-					li {
+					padding: 0;
+					display: flex;
+					margin-left: auto;
+					li{
+						width: 40px;
+						height: 40px;
+						border: solid 1px $color-main;
+						margin-left: 20px;
 						display: flex;
-
-						p {
-							font-size: 16px;
-							color: rgb(51, 51, 51);
-							width: 127px;
-							font-weight: 600;
-						}
-
-						span {
-							font-size: 16px;
-							color: rgb(51, 51, 51);
-						}
-					}
-				}
-			}
-
-			.block__btn {
-				margin-top: 20px;
-			}
-
-			@media(max-width: 991.98px) {
-				padding-top: 10px;
-
-				.product__name a {
-					font-size: 16px;
-				}
-
-				.product__price {
-					padding-bottom: 10px;
-				}
-
-				.product__price .sale,
-				.product__price .promotion {
-					font-size: 14px;
-				}
-
-				.product__desc {
-					padding-top: 10px;
-
-					ul li {
-						margin-bottom: 10px;
-
-						p {
-							font-size: 14px;
-						}
-
-						span {
-							font-size: 14px;
-						}
+						align-items: center;
+						justify-content: center;
 					}
 				}
 			}
