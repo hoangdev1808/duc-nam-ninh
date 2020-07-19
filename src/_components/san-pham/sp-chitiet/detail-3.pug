@@ -1,25 +1,17 @@
-section.block-section.tbl-product.tbl-pro-detail3.wow.fadeInDown(data-wow-delay=".3s")
+section.section.dnn-detail.wow.fadeInDown(data-wow-delay=".3s")
 	.container
-		.block__title.text-center.text-uppercase
-			h3 sản phẩm khác
-		.list-product
-			.swiper-container.product__other
+		.block-title
+			h1 Sản phẩm cùng loại
+		.dnn-detail__list
+			.swiper-container.dnn-detail__list__slide
 				.swiper-wrapper
-					-for(i=1; i<17; i++)
+					-for(i=7; i<12; i++)
 						.swiper-slide
-							.product__item
-								.product__image
-									a(href="chi-tiet-san-pham.html")
-										img(src="./assets/images/product/p-"+i+".png", alt="")
-								.product__desc
-									.product__name
-										a(href="chi-tiet-san-pham.html") Máy in Laser BROTHER HL- L2321D - In đảo mặt tự động
-									.product__infor
-										.product__price
-											p.sale  2.699.000đ
-											p.promotion 3.000.000đ
-										.icon
-											a(href="") 
-												i.fa.fa-shopping-cart
+							a(href="")
+								.dnn-detail__list__slide__img
+										img(src="./assets/images/product/detail-"+i+".png" alt="")
+								.dnn-detail__list__slide__name
+									p Sản phẩm công trình số 1
+									em.ri-arrow-right-line
 			.swiper-button-next
 			.swiper-button-prev
