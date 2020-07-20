@@ -147,7 +147,89 @@ function dnnBannerSlide() {
 			}
 		},
 	});
+	var otherproduct = new Swiper('.dnn-detail__list__other .dnn-detail__list__other__slide', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1000,
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
+		navigation: {
+			nextEl: '.dnn-detail__list__other .swiper-button-next',
+			prevEl: '.dnn-detail__list__other .swiper-button-prev',
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			}
+		},
+	});
+	var swiperproject = new Swiper('.dnn-project-detail3__slide .dnn-project-detail3__slide__product', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1000,
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
+		navigation: {
+			nextEl: '.dnn-project-detail3__slide .swiper-button-next',
+			prevEl: '.dnn-project-detail3__slide .swiper-button-prev',
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			}
+		},
+	});
+	var projectother = new Swiper('.dnn-project-detail4__list .dnn-project-detail4__list__slide', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true,
+		speed: 1000,
+		// autoplay: {
+		// 	delay: 2500,
+		// 	disableOnInteraction: false,
+		// },
+		navigation: {
+			nextEl: '.dnn-project-detail4__list .swiper-button-next',
+			prevEl: '.dnn-project-detail4__list .swiper-button-prev',
+		},
+		breakpoints: {
+			1280: {
+				slidesPerView: 3,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			}
+		},
+	});
 }
+
 //Slide prodcut detail
 function detailThumbs() {
 	var galleryThumbs = new Swiper('.thumbs .dnn-detail1__content__slide__gallery-thumbs', {
@@ -164,6 +246,36 @@ function detailThumbs() {
 	var galleryTop = new Swiper('.dnn-detail1__content__slide .dnn-detail1__content__slide__gallery-top', {
 		spaceBetween: 10,
 		loop: true,
+		thumbs: {
+			swiper: galleryThumbs,
+		},
+
+
+	});
+	galleryTop.params.control = galleryThumbs
+	galleryThumbs.params.control = galleryTop
+}
+
+//Slide project detail
+function detailProjectThumbs() {
+	var galleryThumbs = new Swiper('.dnn-project-detail1__content__thumbs .dnn-project-detail1__content__thumbs__gallery-thumbs', {
+		navigation: {
+			nextEl: '.dnn-project-detail1__content__thumbs .swiper-button-next',
+			prevEl: '.dnn-project-detail1__content__thumbs .swiper-button-prev',
+		},
+		spaceBetween: 10,
+		slidesPerView: 5,
+		loop: true,
+		slideToClickedSlide: true
+	});
+	var galleryTop = new Swiper('.dnn-project-detail1__content__slide .dnn-project-detail1__content__slide__gallery-top', {
+		spaceBetween: 10,
+		loop: true,
+		speed: 2500,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		thumbs: {
 			swiper: galleryThumbs,
 		},
@@ -343,6 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	detailThumbs();
 	checkLayoutBanner();
 	readMore();
+	detailProjectThumbs();
 });
 $(window).resize(function() {
 	if ($(window).width() <= 1024) {
