@@ -744,7 +744,9 @@ textarea {
 		}
 	}
 }
-
+.Module{
+	width: 100%;
+}
 // Search fancybox
 /* Final state */
 /* Reveal content with different delays */
@@ -776,6 +778,7 @@ textarea {
 				border-bottom: 3px solid $color-while;
 				border-radius: 0;
 				color: $color-while;
+				font-size: 50px;
 
 				&:focus {
 					outline: none;
@@ -794,7 +797,7 @@ textarea {
 				transform: translateY(-50%);
 
 				.material-icons {
-					font-size: 30px;
+					font-size: 50px;
 					color: $color-while;
 				}
 			}

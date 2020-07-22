@@ -58,10 +58,12 @@
 			background-image: none;
 			display: flex;
 			align-items: center;
+			border: none;
 		}
 
 		.swiper-button-next {
-			right: 53.5%;
+			top: 50%;
+			right: 52%;
 			transform: translateY(-50%);
 			&::after {
 				content: 'arrow_forward_ios';
@@ -74,6 +76,7 @@
 
 		.swiper-button-prev {
 			top: 50%;
+			left: 20px;
 			transform: translateY(-50%);
 			&::after {
 				content: 'arrow_back_ios';
