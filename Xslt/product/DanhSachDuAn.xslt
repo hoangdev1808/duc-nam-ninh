@@ -11,13 +11,13 @@
                 </div>
                 <div class="dnn-project2__list">
                     <div class="row">
-                        <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+                        <xsl:apply-templates select="/ProductList/Product"></xsl:apply-templates>
                     </div>
                 </div>
             </div>
         </section>
     </xsl:template>
-    <xsl:template match="News">
+    <xsl:template match="Product">
         <div class="col-md-4">
             <div class="dnn-project2__list__item">
                 <div class="dnn-project2__list__item__image">

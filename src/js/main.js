@@ -426,11 +426,11 @@ function readMore() {
 		if (elem == "Xem thêm") {
 			$("#toggle").text("Thu gọn");
 			$('.ri-arrow-down-line').addClass('active')
-			$("#text").slideDown();
+			$(".panel").find('.article').addClass('active')
 		} else {
 			$("#toggle").text("Xem thêm");
 			$('.ri-arrow-down-line').removeClass('active')
-			$("#text").slideUp();
+			$(".panel").find('.article').removeClass('active')
 		}
 	});
 }
