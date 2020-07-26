@@ -39,10 +39,10 @@ function dnnBannerSlide() {
 	var swiperhomebanner = new Swiper('.dnn-home-banner__slide', {
 		loop: true,
 		speed: 1500,
-		autoplay: {
-			delay: 3500,
-			disableOnInteraction: false
-		},
+		// autoplay: {
+		// 	delay: 3500,
+		// 	disableOnInteraction: false
+		// },
 		grabCursor: true,
 		watchSlidesProgress: true,
 		mousewheelControl: true,
@@ -435,6 +435,24 @@ function readMore() {
 	});
 }
 
+//Back top top
+function showBackToTop() {
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 0) {
+			$('#back-to-top').addClass('active');
+		} else {
+			$('#back-to-top').removeClass('active');
+		}
+	});
+
+	$("#back-to-top").on("click", function(e) {
+		e.preventDefault();
+		$("html,body").animate({
+			scrollTop: 0
+		})
+	})
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
@@ -456,6 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkLayoutBanner();
 	readMore();
 	detailProjectThumbs();
+	showBackToTop();
 });
 $(window).resize(function() {
 	if ($(window).width() <= 1024) {

@@ -5,24 +5,20 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
         <!-- Đối tác khách hàng -->
-        <section class="dnn-home7 section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-md-3">
-                        <div class="block-title">
-                            <h1>
-                                <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-md-9">
-                        <div class="row">
-                            <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-xl-3 col-md-3">
+                <div class="block-title">
+                    <h1>
+                        <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
+                    </h1>
                 </div>
             </div>
-        </section>
+            <div class="col-xl-9 col-md-9">
+                <div class="row">
+                    <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+                </div>
+            </div>
+        </div>
     </xsl:template>
     <xsl:template match="News">
         <div class="col-xl-3 col-md-3">

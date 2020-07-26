@@ -92,30 +92,32 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="AboutUs">
-        <div class="col-xl-6 col-md-6 dnn-about2__left">
-            <div class="dnn-about2__left__img">
-                <img >
-                    <xsl:attribute name="src">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="alt">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                </img>
-            </div>
-        </div>
-        <div class="col-xl-6 col-md-6 dnn-about2__right">
-            <div class="dnn-about2__right__content">
-                <div class="block-title">
-                    <h1>
-                        <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                    </h1>
-                </div>
-                <div class="dnn-about2__right__content__desc">
-                    <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+        <xsl:if test="position()=1">
+            <div class="col-xl-6 col-md-6 dnn-about2__left">
+                <div class="dnn-about2__left__img">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
                 </div>
             </div>
-        </div>
+            <div class="col-xl-6 col-md-6 dnn-about2__right">
+                <div class="dnn-about2__right__content">
+                    <div class="block-title">
+                        <h1>
+                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        </h1>
+                    </div>
+                    <div class="dnn-about2__right__content__desc">
+                        <xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+                    </div>
+                </div>
+            </div>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="NangLuc">
         <xsl:if test="position()=1">
@@ -267,15 +269,6 @@
             <li>
                 <h2>0
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     <span class="counter" data-count="6">
                         <xsl:attribute name="data-count">
                             <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
@@ -304,6 +297,7 @@
         <xsl:if test="position()=3">
             <li>
                 <h2>0
+                    
                     
                     
                     
