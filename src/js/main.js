@@ -97,12 +97,13 @@ function dnnBannerSlide() {
 		breakpoints: {
 			1280: {
 				slidesPerView: 3,
+				spaceBetween: 20,
 			},
-			575: {
+			600: {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			320: {
+			375: {
 				slidesPerView: 1,
 				spaceBetween: 0,
 			}
@@ -113,6 +114,8 @@ function dnnBannerSlide() {
 	//About slide
 	var aboutSldie = new Swiper('.dnn-about5__slide', {
 		slidesPerView: 1,
+		spaceBetween: 20,
+		autoplay: true,
 		loop: true,
 		speed: 1000,
 		navigation: {
@@ -141,7 +144,7 @@ function dnnBannerSlide() {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			320: {
+			480: {
 				slidesPerView: 1,
 				spaceBetween: 0,
 			}
@@ -168,7 +171,7 @@ function dnnBannerSlide() {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			320: {
+			480: {
 				slidesPerView: 1,
 				spaceBetween: 0,
 			}
@@ -187,19 +190,6 @@ function dnnBannerSlide() {
 			nextEl: '.dnn-project-detail3__slide .swiper-button-next',
 			prevEl: '.dnn-project-detail3__slide .swiper-button-prev',
 		},
-		breakpoints: {
-			1280: {
-				slidesPerView: 3,
-			},
-			575: {
-				slidesPerView: 2,
-				spaceBetween: 20,
-			},
-			320: {
-				slidesPerView: 1,
-				spaceBetween: 0,
-			}
-		},
 	});
 	var projectother = new Swiper('.dnn-project-detail4__list .dnn-project-detail4__list__slide', {
 		slidesPerView: 3,
@@ -215,17 +205,22 @@ function dnnBannerSlide() {
 			prevEl: '.dnn-project-detail4__list .swiper-button-prev',
 		},
 		breakpoints: {
-			1280: {
+			767: {
 				slidesPerView: 3,
+				spaceBetween: 20,
 			},
 			575: {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			320: {
+			480: {
 				slidesPerView: 1,
-				spaceBetween: 0,
-			}
+				spaceBetween: 20,
+			},
+			375: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
 		},
 	});
 }
@@ -241,7 +236,13 @@ function detailThumbs() {
 		slidesPerView: 5,
 		loop: true,
 		loopedSlides: 5,
-		slideToClickedSlide: true
+		slideToClickedSlide: true,
+		breakpoints: {
+			480: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			}
+		},
 	});
 	var galleryTop = new Swiper('.dnn-detail1__content__slide .dnn-detail1__content__slide__gallery-top', {
 		spaceBetween: 10,
@@ -453,6 +454,16 @@ function showBackToTop() {
 	})
 }
 
+function productListSort() {
+	if ($(window).width() <= 767) {
+		$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').addClass('active');
+		$('.dnn-list-pro2__content__left__title').on('click', function() {
+			$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').slideToggle('active');
+		})
+	}else{
+		$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').removeClass('active');
+	}
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
@@ -475,6 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	readMore();
 	detailProjectThumbs();
 	showBackToTop();
+	productListSort();
 });
 $(window).resize(function() {
 	if ($(window).width() <= 1024) {
@@ -484,4 +496,5 @@ $(window).resize(function() {
 		$('.language').appendTo('.nav-item #language-desktop');
 		$('.search').appendTo('.nav-item #search-desktop');
 	}
+	
 })

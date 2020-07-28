@@ -6,14 +6,14 @@
     <xsl:template match="/">
         <!-- Đối tác khách hàng -->
         <div class="row">
-            <div class="col-xl-3 col-md-3">
+            <div class="col-xl-3 col-md-4">
                 <div class="block-title">
                     <h1>
                         <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
                     </h1>
                 </div>
             </div>
-            <div class="col-xl-9 col-md-9">
+            <div class="col-xl-9 col-md-8">
                 <div class="row">
                     <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
                 </div>
@@ -21,7 +21,7 @@
         </div>
     </xsl:template>
     <xsl:template match="News">
-        <div class="col-xl-3 col-md-3">
+        <div class="col-xl-3 col-md-6 col-sm-6">
             <div class="dnn-home7__item">
                 <img >
                     <xsl:attribute name="src">

@@ -31,10 +31,16 @@ button{
 		transition: .3s all ease-in-out;
 		display: flex;
 		align-items: center;
-		// &:hover {
-		// 	background-color: $main-color;
-		// 	color: #fff;
-		// }
+		&:hover {
+			background-color: $main-color;
+			color: #fff;
+			border: none;
+			transform: none;
+			border-radius: 0;
+			span{
+				transform: none;
+			}
+		}
 		span{
 			transform: skewX(20deg);
 			.ri-arrow-right-line{

@@ -15,6 +15,15 @@
 			&.bottom{
 				height: 400px;
 			}
+			@media screen and ( max-width: 1199px){
+				height: unset;
+				&.bottom{
+					height: unset;
+					&:last-child{
+						margin-top: 30px;
+					}
+				}
+			}
 		}
 	}
 }

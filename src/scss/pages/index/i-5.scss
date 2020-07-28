@@ -48,6 +48,19 @@
 					text-align: center;
 				}
 			}
+			@media screen and ( max-width: 1200px){
+				width: 100%;
+			}
+			@media screen and ( max-width: 1199px){
+				margin-bottom: 30px;
+			}
+			@media screen and ( max-width: 1024px){
+				height: 250px;
+				padding: 30px;
+			}
 		}
+	}
+	@media screen and ( max-width: 1024px){
+		padding-bottom: 0;
 	}
 }

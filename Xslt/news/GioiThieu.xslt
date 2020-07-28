@@ -121,7 +121,7 @@
     </xsl:template>
     <xsl:template match="News" mode="NangLuc">
         <xsl:if test="position()=1">
-            <div class="col-xl-3 col-md-3">
+            <div class="col-xl-3 col-md-6">
                 <div class="dnn-about3__content__item">
                     <div class="dnn-about3__content__item__img">
                         <img >
@@ -140,7 +140,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position()=2">
-            <div class="col-xl-3 col-md-3">
+            <div class="col-xl-3 col-md-6">
                 <div class="dnn-about3__content__item">
                     <div class="dnn-about3__content__item__img">
                         <img >
@@ -159,7 +159,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position()=3">
-            <div class="col-xl-3 col-md-3">
+            <div class="col-xl-3 col-md-6">
                 <div class="dnn-about3__content__item">
                     <div class="dnn-about3__content__item__img">
                         <img >
@@ -178,7 +178,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position()=4">
-            <div class="col-xl-3 col-md-3">
+            <div class="col-xl-3 col-md-6">
                 <div class="dnn-about3__content__item">
                     <div class="dnn-about3__content__item__img">
                         <img >
@@ -225,41 +225,47 @@
     </xsl:template>
     <xsl:template match="News" mode="MayMocThietBi">
         <div class="swiper-slide">
-            <div class="dnn-about5__slide__left">
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                    <img >
-                        <xsl:attribute name="src">
-                            <xsl:value-of select="ImageUrl"></xsl:value-of>
-                        </xsl:attribute>
-                        <xsl:attribute name="alt">
-                            <xsl:value-of select="Title"></xsl:value-of>
-                        </xsl:attribute>
-                    </img>
-                </a>
-            </div>
-            <div class="dnn-about5__slide__right">
-                <div class="block-title">
-                    <h1>
-                        <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                    </h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dnn-about5__slide__left">
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="Url"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:attribute name="title">
+                                <xsl:value-of select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                            <img >
+                                <xsl:attribute name="src">
+                                    <xsl:value-of select="ImageUrl"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:attribute name="alt">
+                                    <xsl:value-of select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                            </img>
+                        </a>
+                    </div>
                 </div>
-                <div class="dnn-about5__slide__right__content">
-                    <a>
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="Url"></xsl:value-of>
-                        </xsl:attribute>
-                        <xsl:attribute name="title">
-                            <xsl:value-of select="Title"></xsl:value-of>
-                        </xsl:attribute>
-                        <xsl:text>Máy in Canon</xsl:text>
-                    </a>
-                    <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+                <div class="col-md-6">
+                    <div class="dnn-about5__slide__right">
+                        <div class="block-title">
+                            <h1>
+                                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            </h1>
+                        </div>
+                        <div class="dnn-about5__slide__right__content">
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="Url"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:attribute name="title">
+                                    <xsl:value-of select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:text>Máy in Canon</xsl:text>
+                            </a>
+                            <xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -268,6 +274,8 @@
         <xsl:if test="position()=1">
             <li>
                 <h2>0
+                    
+                    
                     
                     <span class="counter" data-count="6">
                         <xsl:attribute name="data-count">
@@ -297,6 +305,8 @@
         <xsl:if test="position()=3">
             <li>
                 <h2>0
+                    
+                    
                     
                     
                     
@@ -336,7 +346,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Top">
         <xsl:if test="position()=1">
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-4 col-md-6">
                 <div class="dnn-about7__content__img">
                     <a>
                         <xsl:attribute name="data-fancybox">
@@ -361,7 +371,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position()=2">
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-4 col-md-6">
                 <div class="dnn-about7__content__img">
                     <a>
                         <xsl:attribute name="data-fancybox">
@@ -386,7 +396,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position()=3">
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-4 col-md-6">
                 <div class="dnn-about7__content__img">
                     <a>
                         <xsl:attribute name="data-fancybox">
@@ -413,7 +423,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Bottom">
         <xsl:if test="position()=4">
-            <div class="col-xl-6 col-md-6">
+            <div class="col-xl-6 col-md-12">
                 <div class="dnn-about7__content__img bottom mb-0">
                     <a>
                         <xsl:attribute name="data-fancybox">
@@ -438,7 +448,7 @@
             </div>
         </xsl:if>
         <xsl:if test="position()=5">
-            <div class="col-xl-6 col-md-6">
+            <div class="col-xl-6 col-md-12">
                 <div class="dnn-about7__content__img bottom mb-0">
                     <a>
                         <xsl:attribute name="data-fancybox">

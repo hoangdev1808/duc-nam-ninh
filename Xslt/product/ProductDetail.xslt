@@ -111,7 +111,8 @@
     </xsl:template>
     <xsl:template match="ProductImages">
         <div class="swiper-slide">
-            <img>
+            <div class="img">
+                 <img>
                 <xsl:attribute name="src">
                     <xsl:value-of select="ImageUrl"></xsl:value-of>
                 </xsl:attribute>
@@ -119,6 +120,8 @@
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
             </img>
+            </div>
+           
         </div>
     </xsl:template>
     <xsl:template match="ProductAttributes" mode="Title">

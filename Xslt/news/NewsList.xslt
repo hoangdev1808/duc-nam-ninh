@@ -11,7 +11,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Big">
         <xsl:if test="position()&gt;0 and position()&lt;3">
-            <div class="col-xl-6 col-md-4 dnn-news2__item">
+            <div class="col-xl-6 col-12 dnn-news2__item">
                 <div class="dnn-news2__item__img">
                     <a>
                         <xsl:attribute name="href">
@@ -37,7 +37,7 @@
                             <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                     </div>
-                    <div class="dnn-news2__item__desc__title lcl lcl-2">
+                    <div class="dnn-news2__item__desc__title">
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="Url"></xsl:value-of>
@@ -54,7 +54,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Small">
         <xsl:if test="position()>2">
-            <div class="col-xl-4 col-12 dnn-news2__item" id="small-img">
+            <div class="col-xl-4 col-sm-6 col-12 dnn-news2__item" id="small-img">
                 <div class="dnn-news2__item__img">
                     <a>
                         <xsl:attribute name="href">
@@ -80,7 +80,7 @@
                             <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                     </div>
-                    <div class="dnn-news2__item__desc__title lcl lcl-1">
+                    <div class="dnn-news2__item__desc__title">
                         <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of select="Url"></xsl:value-of>

@@ -37,5 +37,17 @@
 				margin-top: 20px;
 			}
 		}
+		@media screen and ( max-width: 1024px){
+			min-height: unset;
+			&__content{
+				width: 100%;
+				&__desc{
+					max-height: 300px;
+				}
+			}
+		}
+		@media screen and ( max-width: 767px){
+			margin-bottom: 15px;
+		}
 	}
 }

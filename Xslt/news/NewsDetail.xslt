@@ -7,7 +7,7 @@
         <section class="section dnn-news-detail wow fadeInDown" data-wow-delay=".3s">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-xl-9">
                         <div class="block-title">
                             <h1>
                                 <xsl:value-of select="/NewsDetail/Title" disable-output-escaping="yes"></xsl:value-of>
@@ -48,7 +48,7 @@
                             <xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xl-3">
                         <div class="dnn-news-detail__other">
                             <div class="block-title">
                                 <h1>Tin tức khác</h1>

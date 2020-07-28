@@ -25,6 +25,9 @@
 				margin: 0 auto;
 				padding-bottom: 15px;
 				border-bottom: solid 2px $main-color;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				h2{
 					font-size: 18px;
 					font-family: "Montserrat";
@@ -32,6 +35,24 @@
 					font-weight: bold;
 					line-height: 1.111;
 					text-align: center;
+					cursor: pointer;
+				}
+				.ri-arrow-down-line{
+					display: none;
+				}
+				@media screen and ( max-width: 767px){
+					width: 100%;
+					.ri-arrow-down-line{
+						display: block;
+						margin-left: 30px;
+						cursor: pointer;
+						transform: rotate(0deg);
+						transition: all ease-in-out .3s;
+						&.active{
+							transform: rotate(180deg);
+							transition: all ease-in-out .3s;
+						}
+					}
 				}
 			}
 			&__list{
@@ -64,6 +85,17 @@
 								color: $main-color;
 							}
 						}
+					}
+				}
+			}
+			@media screen and ( max-width: 1199px){
+				width: 100%;
+			}
+			@media screen and ( max-width: 767px){
+				max-height: unset;
+				&__list{
+					&.active{
+						display: none;
 					}
 				}
 			}
@@ -119,6 +151,9 @@
 						visibility: hidden;
 						opacity: 0;
 						transition: all ease-in-out .3s;
+					}
+					@media screen and ( max-width: 1200px){
+						width: 100%;
 					}
 				}
 				&__desc {

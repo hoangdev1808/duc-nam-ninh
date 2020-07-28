@@ -171,6 +171,12 @@
 
 		&__img {
 			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+		@media screen and ( max-width: 1024px){
+			height: unset;
 		}
 	}
 
@@ -194,6 +200,10 @@
 					margin-bottom: 35px;
 				}
 			}
+		}
+		@media screen and ( max-width: 1024px){
+			padding-top: 30px;
+			padding-left: 15px;
 		}
 	}
 }
@@ -219,6 +229,9 @@
 					font-family: "Montserrat";
 					color: rgb(255, 255, 255);
 					font-weight: bold;
+					@media screen and ( max-width: 1024px){
+						font-size: 14px;
+					}
 				}
 			}
 		}

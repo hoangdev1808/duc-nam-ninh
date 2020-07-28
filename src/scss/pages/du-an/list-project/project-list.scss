@@ -52,11 +52,17 @@
 						font-weight: bold;
 						transition: all ease-in-out .3s;
 					}
+					@media screen and ( max-width: 1024px){
+						padding: 15px 0;
+					}
 				}
 
 				&__content {
 					max-height: 75px;
 					overflow: hidden;
+					@media screen and ( max-width: 1024px){
+						max-height: 85px;
+					}
 				}
 
 				&__read-more {

@@ -113,7 +113,7 @@
     <xsl:template match="ProductRelated">
         <div class="swiper-slide">
             <div class="row">
-                <div class="col-xl-6 col-12">
+                <div class="col-xl-6 col-md-6">
                     <div class="dnn-project-detail3__slide__product__img">
                         <img >
                             <xsl:attribute name="src">
@@ -125,7 +125,7 @@
                         </img>
                     </div>
                 </div>
-                <div class="col-xl-6 col-12">
+                <div class="col-xl-6 col-md-6">
                     <div class="dnn-project-detail3__slide__product__desc">
                         <a>
                             <xsl:attribute name="href">

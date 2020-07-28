@@ -10,6 +10,11 @@ footer{
 		.footer-card{
 			width: 100%;
 			padding-bottom: 40px;
+			&:nth-child(2){
+				@media screen and ( max-width: 575px){
+					display: inline-block !important;
+				}
+			}
 			.card__title{
 				position: relative;
 				margin-bottom: 15px;
@@ -129,6 +134,9 @@ footer{
 							color: rgb(102, 102, 102);
 							line-height: 1.429;
 						}
+						@media screen and ( max-width: 575px){
+							width: 100%;
+						}
 					}
 					.subscribebutton{
 						border-radius: 0;
@@ -159,8 +167,8 @@ footer{
 					padding: 0;
 					list-style: none;
 					li{
-						width: 40px;
-						height: 40px;
+						min-width: 40px;
+						min-height: 40px;
 						border-radius: 50%;
 						border: solid 1px #a9a9a9;
 						margin-left: 30px;
@@ -182,10 +190,11 @@ footer{
 						&:last-child{
 							padding-right: 0;
 						}
-						@media screen and ( max-width: 768px){
+						@media screen and ( max-width: 1024px){
 							&:first-child{
 								margin-left: 0;
 							}
+							margin-left: 15px;
 						}
 					}
 					@media(max-width: 768px){

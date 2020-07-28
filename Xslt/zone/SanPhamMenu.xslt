@@ -6,6 +6,7 @@
     <xsl:template match="/">
         <div class="dnn-list-pro2__content__left__title">
             <h2>Danh sách sản phẩm</h2>
+             <span class="ri-arrow-down-line"></span>
         </div>
         <div class="dnn-list-pro2__content__left__list">
             <ul>

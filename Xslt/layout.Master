@@ -4,7 +4,7 @@
 <html id="Html1" runat="server">
 
 	<head id="Head1" runat="server">
-		<title></title>
+		<title>Trang chủ - Đúc Nam Ninh</title>
 		<portal:MetaContent ID="MetaContent" runat="server" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" JQueryUIThemeName="smoothness" />
@@ -73,15 +73,15 @@
 					<div class="footer-block">
 						<div class="container">
 							<div class="row">
-								<div class="col-md-4 col-sm-6 col-6 footer-card">
+								<div class="col-md-4 col-sm-6 col-12 footer-card">
                                     <portal:modulewrapper id="mdl142" runat="server" configuremoduleid="142" />
 								</div>
-								<div class="col-md-4 col-sm-6 col-6 footer-card d-flex justify-content-center">
+								<div class="col-md-4 col-sm-6 col-12 footer-card d-flex justify-content-center">
 									<div>
 										<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-6 col-6 footer-card">
+								<div class="col-md-4 col-sm-6 col-12 footer-card">
 									<portal:modulewrapper id="mdl143" runat="server" configuremoduleid="143" />
 									<portal:modulewrapper id="mdl145" runat="server" configuremoduleid="145" />
 									<div class="card__media">
@@ -112,13 +112,8 @@
 						</div>
 					</div>
 				</footer>
-				<div class="dekstop" id="block__tool">
-					<ul>
-						<li><a href=""><em class="fa fa-shield"></em></a></li>
-						<li><a href="shopping.html"><em class="fa fa-cart-plus"></em></a></li>
-						<li><a href=""><em class="fa fa-phone"></em></a></li>
-					</ul>
-				</div>
+				<portal:modulewrapper id="mdl213" runat="server" configuremoduleid="213" />
+				<div id="back-to-top"><img src="/Data/Sites/1/skins/default/assets/icons/gototop.png" alt="" srcset=""></div>
 				<div class="searchbox" id="searchfancybox" style="display: none;">
 					<div class="container">
 						<div class="content">

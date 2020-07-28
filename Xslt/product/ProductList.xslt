@@ -15,7 +15,7 @@
     </xsl:template>
     <xsl:template match="Product">
 		<xsl:if test="position()&lt;10">
-			<div class="col-md-4 dnn-list-pro2__content__right__item">
+			<div class="col-xl-4 col-md-6 col-sm-6 dnn-list-pro2__content__right__item">
             <a>
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>

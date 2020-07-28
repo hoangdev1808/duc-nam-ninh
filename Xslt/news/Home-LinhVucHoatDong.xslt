@@ -10,13 +10,13 @@
             </h1>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-4 col-md-12">
                 <div class="row">
                     <xsl:apply-templates select="/NewsList/News" mode="Left"></xsl:apply-templates>
                 </div>
             </div>
             <xsl:apply-templates select="/NewsList/News" mode="Middle"></xsl:apply-templates>
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-4 col-md-6 col-sm-6">
                 <div class="row">
                     <xsl:apply-templates select="/NewsList/News" mode="Right"></xsl:apply-templates>
                 </div>
@@ -25,7 +25,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Left">
         <xsl:if test="position()&gt;0 and position()&lt;3">
-            <div class="col-xl-12 col-md-12">
+            <div class="col-xl-12 col-md-6">
                 <div class="dnn-home4__content__img">
                     <div class="dnn-home4__content__img__small">
                         <img >
@@ -54,7 +54,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Middle">
         <xsl:if test="position()=3">
-            <div class="col-xl-4 col-md-4">
+            <div class="col-xl-4 col-md-6 col-sm-6">
                 <div class="dnn-home4__content__img">
                     <div class="dnn-home4__content__img__big">
                         <img >
@@ -83,7 +83,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Right">
         <xsl:if test="position()&gt;3 and position()&lt;6">
-            <div class="col-xl-12 col-md-12">
+            <div class="col-xl-12">
                 <div class="dnn-home4__content__img">
                     <div class="dnn-home4__content__img__small">
                         <img >

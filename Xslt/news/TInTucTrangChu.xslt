@@ -32,7 +32,7 @@
             <xsl:apply-templates select="News" mode="Left"></xsl:apply-templates>
         </xsl:if>
         <xsl:if test="position()=1">
-            <div class="col-xl-6 col-md-6 dnn-home6__content__right">
+            <div class="col-xl-6 col-md-12 dnn-home6__content__right">
                 <ul class="dnn-home6__content__right__list">
                     <xsl:apply-templates select="News" mode="Right"></xsl:apply-templates>
                 </ul>
@@ -41,7 +41,7 @@
     </xsl:template>
     <xsl:template match="News" mode="Left">
         <xsl:if test="position()=1">
-            <div class="col-xl-6 col-md-6 dnn-home6__content__left">
+            <div class="col-xl-6 col-md-12 dnn-home6__content__left">
                 <div class="dnn-home6__content__left__img">
                     <img >
                         <xsl:attribute name="src">

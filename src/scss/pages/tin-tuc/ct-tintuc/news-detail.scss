@@ -169,8 +169,6 @@
 					img{
 						width: 100%;
 						height: 100%;
-						transition: all ease-in-out .3s;
-						transform: scale(1.1);
 					}
 				}
 				&__desc{
@@ -197,16 +195,20 @@
 					}
 				}
 				&:hover{
-					.dnn-news-detail__other__list__item__img{
-						img{
-							transform: scale(1);
-							transition: all ease-in-out .3s;
-						}
-					}
 					.dnn-news-detail__other__list__item__desc{
 						p{
 							color: $main-color
 						}
+					}
+				}
+				@media screen and ( max-width: 1024px){
+					max-height: unset;
+					&__img{
+						height: unset;
+						width: 100%;
+					}
+					&__desc{
+						width: 100%;
 					}
 				}
 			}

@@ -101,6 +101,24 @@
 			display: flex;
 			justify-content: center;
 			padding-top: 40px;
+			@media screen and ( max-width: 1024px){
+				padding-top: 15px;
+			}
+		}
+		@media screen and ( max-width: 1199px){
+			&__left{
+				margin-bottom: 30px;
+				&__img{
+					height: unset;
+				}
+			}
+			&__right{
+				&__list{
+					&__item{
+						padding: 15px 0;
+					}
+				}
+			}
 		}
 	}
 }

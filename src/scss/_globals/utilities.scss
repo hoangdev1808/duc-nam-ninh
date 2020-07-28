@@ -176,7 +176,7 @@ textarea {
 		color: #333333;
 
 		@media(max-width: 1025px) {
-			font-size: 20px;
+			font-size: 26px;
 		}
 	}
 
@@ -865,6 +865,7 @@ textarea {
 				align-items: center;
 				justify-content: center;
 				transition: all ease-in-out .3s;
+				padding: 15px;
 
 				.img {
 					width: 145px;
@@ -892,6 +893,9 @@ textarea {
 					visibility: hidden;
 					opacity: 0;
 					transition: all ease-in-out .3s;
+				}
+				@media screen and ( max-width: 1199px){
+					width: 100%;
 				}
 			}
 

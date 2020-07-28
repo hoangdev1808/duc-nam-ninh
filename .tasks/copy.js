@@ -7,11 +7,11 @@ import {
 } from "graceful-fs";
 
 const copyFavicon = () => {
-	return src('src/favicon.ico').pipe(dest('_dist'))
+	return src('src/favicon.ico').pipe(dest('_dist/assets'))
 }
 
 const copyAssets = () => {
-	return src("src/assets/**/**.{svg,png,jpg,jpeg,gif,mp4}")
+	return src("src/assets/**/**.{svg,png,jpg,jpeg,gif,mp4,ico}")
 		.pipe(dest("_dist/assets"))
 };
 

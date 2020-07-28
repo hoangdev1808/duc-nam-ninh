@@ -18,7 +18,7 @@
 		
 	</xsl:template>
 	<xsl:template match="News">
-		<div class="col-xl-2 col-md-2">
+		<div class="col-xl-2 col-md-4 col-sm-6">
 			<div class="dnn-home5__content__item">
 				<div class="dnn-home5__content__item__img">
 				<img >

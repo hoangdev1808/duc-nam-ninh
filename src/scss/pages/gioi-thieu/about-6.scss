@@ -17,7 +17,7 @@
 			ul{
 				display: flex;
 				align-items: center;
-				padding-left: none;
+				padding-left: 0;
 				list-style: none;
 				li{
 					margin-left: auto;
@@ -38,6 +38,31 @@
 					}
 				}
 			}
+			@media screen and ( max-width: 1024px){
+				width: 100%;
+				ul{
+					li{
+						h2{
+							font-size: 30px;
+						}
+					}
+				}
+			}
+			@media screen and ( max-width: 480px){
+				ul{
+					display: flex;
+					flex-direction: column;
+					li{
+						margin-left: 0;
+						h2{
+							font-size: 30px;
+						}
+					}
+				}
+			}
 		}
+	}
+	@media screen and ( max-width: 1024px){
+		min-height: unset;
 	}
 }

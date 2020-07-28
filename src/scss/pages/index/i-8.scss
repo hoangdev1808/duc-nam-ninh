@@ -6,21 +6,26 @@
 	background-position: center;
 	&__content{
 		&__img{
+			padding: 30px;
 			width: 390px;
 			min-height: 220px;
 			background-color: $color-while;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@media screen and ( max-width: 1199px){
+				width: 100%;
+			}
 		}
 		&__desc{
 			position: relative;
 			display: flex;
 			.simple{
-				font-size: 200px;
-				font-family: "K2D";
-				color: rgba(255, 255, 255, 0.149);
-				line-height: 1.2;
+				span{
+					font-size: 200px;
+					font-family: "K2D";
+					color: rgba(255, 255, 255, 0.149);
+				}
 				margin-top: -60px;
 			}
 			span{
@@ -31,6 +36,7 @@
 				font-style: italic;
 				line-height: 1.25;
 				text-align: left;
+				padding-left: 20px;
 			}
 			&__supdesc{
 				float: right;
@@ -55,6 +61,21 @@
 						}
 					}
 					
+				}
+			}
+			@media screen and ( max-width: 1024px){
+				margin-top: 15px;
+				.simple{
+					margin-top: -30px;
+					span{
+					font-size: 100px;
+					}
+				}
+				span{
+					font-size: 16px;
+				}
+				&__supdesc{
+					padding-top: 15px;
 				}
 			}
 		}
