@@ -399,7 +399,7 @@ const checkLayoutBanner = () => {
 };
 
 function listFilter() {
-	$('span').click(function(j) {
+	$('.acc__title').click(function(j) {
 		var dropDown = $(this).closest('.acc__card').find('.acc__panel');
 		$(this).closest('.acc').find('.acc__panel').not(dropDown).slideUp();
 		if ($(this).hasClass('active')) {
@@ -413,11 +413,6 @@ function listFilter() {
 		dropDown.stop(false, true).slideToggle();
 		j.preventDefault();
 	});
-	if ($(window).width() <= 1024)
-		$('.block__title').find('.acc__mobile').on('click', function(e) {
-			$('.content__sidebar').find('.acc').toggleClass('active');
-			e.preventDefault();
-		});
 }
 
 //Read more article

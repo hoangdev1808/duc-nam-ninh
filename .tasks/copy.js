@@ -7,7 +7,8 @@ import {
 } from "graceful-fs";
 
 const copyFavicon = () => {
-	return src('src/favicon.ico').pipe(dest('_dist/assets'))
+	return src('src/**.{ico,png}')
+		.pipe(dest('_dist'))
 }
 
 const copyAssets = () => {
@@ -26,7 +27,7 @@ const copyFonts = () => {
 };
 
 module.exports = {
+	copyFavicon,
 	copyAssets,
 	copyFonts,
-	copyFavicon
 };
