@@ -4,14 +4,16 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="dnn-list-pro2__content__left__title">
-            <h2>Danh sách sản phẩm</h2>
-             <span class="ri-arrow-down-line"></span>
-        </div>
-        <div class="dnn-list-pro2__content__left__list">
-            <ul>
-                <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
-            </ul>
+        <div class="dnn-list-pro2__content__left">
+            <div class="dnn-list-pro2__content__left__title">
+                <h2>Danh sách sản phẩm</h2>
+                <span class="ri-arrow-down-line"></span>
+            </div>
+            <div class="dnn-list-pro2__content__left__list">
+                <ul>
+                    <xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
+                </ul>
+            </div>
         </div>
     </xsl:template>
     <xsl:template match="Zone">

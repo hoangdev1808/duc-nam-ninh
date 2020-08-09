@@ -4,7 +4,10 @@
 }
 .dnn-field2{
 	.block-title{
-		text-align: center
+		text-align: center;
+		h1{
+			text-transform: uppercase;
+		}
 	}
 	&__content{
 		cursor: pointer;
@@ -25,18 +28,18 @@
 		}
 		&__desc{
 			padding-top: 30px;
-			padding-left: 60px;
+			padding-left: 30px;
 			h2{
 				font-size: 24px;
 				font-family: "Montserrat";
 				color: rgb(51, 51, 51);
-				font-weight: bold;
+				font-weight: 600;
 				margin-bottom: 30px;
 			}
 			p{
 				font-size: 16px;
 				font-family: "Montserrat";
-				color: rgb(51, 51, 51);
+				color: #333;
 				line-height: 1.375;
 				text-align: left;
 				
@@ -46,6 +49,9 @@
 				h2{
 					margin-bottom: 15px;
 				}
+			}
+			&.pl-70{
+				padding-left: 70px;
 			}
 		}
 		&:hover{

@@ -3,6 +3,10 @@
 	padding-bottom: 0;
 	.block-title{
 		margin-bottom: 25px;
+		h1{
+			text-transform: uppercase;
+			text-align: center;
+		}
 	}
 	&__content{
 		width: 100%;
@@ -45,6 +49,12 @@
 			&__gallery-thumbs{
 				overflow: hidden;
 				width: 100%;
+				.swiper-slide{
+					border: solid 1px transparent;
+					&:hover{
+						border: solid 1px $main-color;
+					}
+				}
 				&__img{
 					height: 150px;
 					img{

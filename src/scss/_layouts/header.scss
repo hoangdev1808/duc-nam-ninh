@@ -169,6 +169,20 @@ header {
 								height: 27px;
 							}
 						}
+						&.active {
+							position: relative;
+							&::before {
+								content: '';
+								position: absolute;
+								bottom: -150%;
+								left: 50%;
+								transform: translateX(-50%);
+								width: 100%;
+								transition: ease-in-out all .3s;
+								height: 3px;
+								background-color: $main-color;
+							}
+						}
 					}
 
 					@media screen and (min-width: 1025px) {
@@ -181,14 +195,14 @@ header {
 					}
 
 					&.active {
-						&::after {
+						position: relative;
+						&::before {
 							content: '';
 							position: absolute;
 							bottom: -70%;
 							left: 50%;
 							transform: translateX(-50%);
-							width: 0;
-							visibility: hidden;
+							width: 100%;
 							transition: ease-in-out all .3s;
 							height: 3px;
 							background-color: $main-color;

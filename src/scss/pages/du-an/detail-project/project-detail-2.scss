@@ -1,6 +1,6 @@
 .dnn-project-detail2 {
 	padding-top: 45px;
-
+	padding-bottom: 54px;
 	.block-title {
 		text-align: center;
 		margin-bottom: 20px;
@@ -19,8 +19,17 @@
 			}
 			tr{
 				height: 40px;
+				td{
+					padding-left: 20px;
+					&:nth-child(2){
+						color: #333333;
+					}
+					&:nth-child(1){
+						width: 380px;
+					}
+				}
 				th{
-					min-width: 390px;
+					width: 390px;
 					padding: 0 20px;
 					font-size: 16px;
 					font-family: "Montserrat";

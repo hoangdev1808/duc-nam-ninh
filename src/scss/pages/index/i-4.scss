@@ -34,8 +34,8 @@
 				align-items: center;
 				transition: all ease-in-out .3s;
 				a{
-					color: $color-while;
-					font-size: 16px;
+					color: #fffefe;
+					font-size: 20px;
 					font-family: "Montserrat";
 					font-weight: bold;
 					text-align: left;
@@ -44,7 +44,7 @@
 					background-color: rgba($color: $main-color, $alpha: .8);
 					transition: all ease-in-out .3s;
 					a{
-						text-decoration: underline;
+						border-bottom: solid 1px #fff;
 					}
 				}
 			}

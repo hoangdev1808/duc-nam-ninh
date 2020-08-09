@@ -49,9 +49,19 @@
 		}
 		.thumbs{
 			position: relative;
+			.dnn-detail1__content__slide__gallery-thumbs{
+				.swiper-slide{
+					border: solid 1px transparent;
+					transition: all ease-in-out .2s;
+					&:hover{
+						border: solid 1px $main-color;
+						transition: all ease-in-out .2s;
+					}
+				}
+			}
 			.swiper-button-next{
 				background-image: none;
-				right: -60px;
+				right: -35px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -66,7 +76,7 @@
 			}
 			.swiper-button-prev{
 				background-image: none;
-				left: -60px;
+				left: -35px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -82,7 +92,7 @@
 		}
 
 		&__product-detail {
-			padding-left: 55px;
+			padding-left: 30px;
 			height: 100%;
 			.block-title{
 				margin-bottom: 10px;

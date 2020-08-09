@@ -60,6 +60,9 @@
 				&__content {
 					max-height: 75px;
 					overflow: hidden;
+					p{
+						color: #333333;
+					}
 					@media screen and ( max-width: 1024px){
 						max-height: 85px;
 					}
@@ -96,6 +99,7 @@
 					}
 					.dnn-project2__list__item__description__read-more{
 						a{
+							border-bottom: solid 1px $main-color;
 							color: $main-color;
 							&::after{
 								color: $main-color;

@@ -264,7 +264,7 @@ function detailProjectThumbs() {
 			nextEl: '.dnn-project-detail1__content__thumbs .swiper-button-next',
 			prevEl: '.dnn-project-detail1__content__thumbs .swiper-button-prev',
 		},
-		spaceBetween: 10,
+		spaceBetween: 30,
 		slidesPerView: 5,
 		loop: true,
 		slideToClickedSlide: true

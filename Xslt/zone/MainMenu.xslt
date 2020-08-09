@@ -10,7 +10,11 @@
     </xsl:template>
     <xsl:template match="Zone">
         <li class="nav-item">
-            <!-- <xsl:if test="IsActive"><xsl:attribute name="class"><xsl:text>nav-item active</xsl:text></xsl:attribute></xsl:if> -->
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>nav-item active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:if test="position()=1">
                 <a class="nav-link">
                     <xsl:attribute name="href">

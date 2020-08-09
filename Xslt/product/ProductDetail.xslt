@@ -37,7 +37,17 @@
                                 <xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FullContent"></xsl:value-of>
                             </div>
                             <div class="dnn-detail1__content__product-detail__contact">
-                                <a class="btn btn__contact" href="">Liên hệ</a>
+                                <a class="btn btn__contact">
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of select="Url"></xsl:value-of>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="title">
+                                        <xsl:value-of select="Title"></xsl:value-of>
+                                    </xsl:attribute>
+                                    <xsl:text>
+                                Liên hệ
+                            </xsl:text>
+                                </a>
                                 <ul>
                                     <li>
                                         <a>
@@ -112,20 +122,24 @@
     <xsl:template match="ProductImages">
         <div class="swiper-slide">
             <div class="img">
-                 <img>
-                <xsl:attribute name="src">
-                    <xsl:value-of select="ImageUrl"></xsl:value-of>
-                </xsl:attribute>
-                <xsl:attribute name="alt">
-                    <xsl:value-of select="Title"></xsl:value-of>
-                </xsl:attribute>
-            </img>
+                <img>
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                    </xsl:attribute>
+                    <xsl:attribute name="alt">
+                        <xsl:value-of select="Title"></xsl:value-of>
+                    </xsl:attribute>
+                </img>
             </div>
-           
         </div>
     </xsl:template>
     <xsl:template match="ProductAttributes" mode="Title">
         <li>
+            <xsl:if test="position()=1">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
                     <xsl:text>active</xsl:text>
@@ -140,6 +154,11 @@
     </xsl:template>
     <xsl:template match="ProductAttributes" mode="Content">
         <div class="panel">
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
             <xsl:attribute name="id">
                 <xsl:text disable-output-escaping="yes">panel-</xsl:text>
                 <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
