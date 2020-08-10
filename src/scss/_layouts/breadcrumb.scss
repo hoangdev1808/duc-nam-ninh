@@ -17,27 +17,41 @@
 			align-items: center;
 			a{
 				font-size: 14px;
-				color: rgb(102, 102, 102);
+				color: #333333;
 				font-weight: 400;
-				font-family: Barlow;
+				font-family: Montserrat;
 				text-decoration: none;
 				@media(max-width: 991.98px){
 					font-size: 10px;
 				}
 			}
+			span{
+				font-size: 14px;
+				color: #333333;
+				font-weight: 400;
+				font-family: Montserrat;
+				text-decoration: none;
+			}
 			&:hover{
-				a{
+				span{
 					color: $main-color;
 				}
 			}
 			&:first-child{
+				span{
+					display: none;
+				}
 				padding-left: 0;
 				a{
 					font-size: 0;
 					&::after{
 						font-family: 'Material Icons';
-						font-size: 16px;
+						font-size: 14px;
 						content: "home";
+						color: #333333;
+					}
+					&:hover{
+						color: $main-color;
 					}
 				} 
 

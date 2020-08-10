@@ -120,7 +120,7 @@
 				overflow: hidden;
 
 				a {
-					font-size: 16px;
+					font-size: 20px;
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
 					font-weight: bold;
@@ -162,6 +162,13 @@
 		&:nth-child(6),
 		&:nth-child(7),
 		&:nth-child(8){
+			.dnn-news2__item__desc{
+				.dnn-news2__item__desc__title{
+					a{
+						font-size: 16px;
+					}
+				}
+			}
 			.dnn-news2__item__img{
 				height: 230px;
 			}
