@@ -219,7 +219,9 @@ header {
 						border: 0;
 						outline: none;
 						background-color: transparent;
-
+						width: 20px;
+						height: 20px;
+						padding: 0;
 						&::after {
 							display: none;
 						}

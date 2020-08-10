@@ -11,7 +11,7 @@
     </xsl:template>
     <xsl:template match="News">
         <xsl:if test="position()=5">
-            <div class="col-xl-6 col-md-6 dnn-home2__left">
+            <div class="col-xl-6 dnn-home2__left">
                 <div class="dnn-home2__left__content">
                     <div class="block-title">
                         <h1>
@@ -36,7 +36,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-xl-6 col-md-6 dnn-home2__right">
+            <div class="col-xl-6 dnn-home2__right">
                 <div class="dnn-home2__right__img">
                     <img >
                         <xsl:attribute name="src">

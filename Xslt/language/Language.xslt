@@ -14,7 +14,7 @@
         </div>
     </xsl:template>
     <xsl:template match="Language" mode="Active">
-        <xsl:if test="IsActive='true'">
+        <xsl:if test="IsActive='false'">
             <a>
                 <img>
                     <xsl:attribute name="src">
@@ -25,7 +25,7 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="Language">
-        <xsl:if test="IsActive='false'">
+        <xsl:if test="IsActive='true'">
             <a class="dropdown-item">
                 <xsl:attribute name="href">
                     <xsl:value-of select="Url"></xsl:value-of>

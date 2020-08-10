@@ -209,7 +209,6 @@ textarea {
 				justify-content: center;
 				cursor: pointer;
 				transition: ease-in-out all .3s;
-				border: solid 1px $main-color;
 
 				a {
 					font-size: 18px;
@@ -226,13 +225,20 @@ textarea {
 					}
 				}
 
-				// &.active {
-				// 	span {
-				// 		color: #fff;
-				// 	}
-				// 	background-color: $main-color
-				// }
+				&.active {
+					span {
+						color: #fff;
+					}
+
+					background-color: $main-color
+				}
 			}
+			// .PagerOtherPageCells{
+			// 	&:nth-child(3){
+			// 		display: none;
+			// 	}
+			// }
+
 		}
 	}
 }
@@ -744,9 +750,11 @@ textarea {
 		}
 	}
 }
-.Module{
+
+.Module {
 	width: 100%;
 }
+
 // Search fancybox
 /* Final state */
 /* Reveal content with different delays */
@@ -788,6 +796,12 @@ textarea {
 				&::placeholder {
 					color: $color-while;
 				}
+				@media screen and ( max-width: 1024px){
+					font-size: 25px;
+				}
+				@media screen and ( max-width: 375px){
+					font-size: 15px;
+				}
 			}
 
 			.searchbutton {
@@ -799,6 +813,9 @@ textarea {
 				.material-icons {
 					font-size: 50px;
 					color: $color-while;
+					@media screen and ( max-width: 1024px){
+						font-size: 25px;
+					}
 				}
 			}
 		}
@@ -885,6 +902,7 @@ textarea {
 					height: 50px;
 					top: 50%;
 					left: 50%;
+					padding-top: 7px;
 					transform: translate(-50%, -50%);
 					content: url('../assets/icons/hover-img.png');
 					display: flex;
@@ -894,7 +912,8 @@ textarea {
 					opacity: 0;
 					transition: all ease-in-out .3s;
 				}
-				@media screen and ( max-width: 1199px){
+
+				@media screen and (max-width: 1199px) {
 					width: 100%;
 				}
 			}
@@ -1002,4 +1021,14 @@ textarea {
 .swiper-button-next {
 	right: -75px;
 	background-image: url('../assets/icons/next.png');
+}
+.order-1{
+	@media screen and ( min-width: 1024px){
+		order: 1;
+	}
+}
+.order-2{
+	@media screen and ( min-width: 1024px){
+		order: 2;
+	}
 }

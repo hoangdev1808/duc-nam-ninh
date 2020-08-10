@@ -11,7 +11,7 @@
     </xsl:template>
     <xsl:template match="News">
         <xsl:if test="position()=3">
-            <div class="col-xl-6 col-md-6 dnn-home1__left">
+            <div class="col-xl-6 dnn-home1__left">
             <div class="dnn-home1__left__img">
                 <img >
                     <xsl:attribute name="src">
@@ -23,7 +23,7 @@
                 </img>
             </div>
         </div>
-        <div class="col-xl-6 col-md-6 dnn-home1__right">
+        <div class="col-xl-6 dnn-home1__right">
             <div class="dnn-home1__right__content">
                 <div class="block-title">
                     <h1><xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of></h1>

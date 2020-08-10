@@ -4,8 +4,7 @@
     xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <section class="section dnn-partner2">
-            <div class="container">
+       
                 <div class="block-title">
                     <h1>
                         <xsl:value-of select="/NewsList/ModuleTitle" disable-output-escaping="yes"></xsl:value-of>
@@ -14,8 +13,7 @@
                 <div class="dnn-partner2__list">
                     <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
                 </div>
-            </div>
-        </section>
+           
     </xsl:template>
     <xsl:template match="News">
         <div class="dnn-partner2__list__item">

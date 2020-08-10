@@ -417,18 +417,24 @@ function listFilter() {
 
 //Read more article
 function readMore() {
-	$('#toggle').click(function() {
-		var elem = $("#toggle").text();
-		if (elem == "Xem thêm") {
-			$("#toggle").text("Thu gọn");
-			$('.ri-arrow-down-line').addClass('active')
-			$(".panel").find('.article').addClass('active')
-		} else {
-			$("#toggle").text("Xem thêm");
-			$('.ri-arrow-down-line').removeClass('active')
-			$(".panel").find('.article').removeClass('active')
-		}
-	});
+	var hieghtText = $(".panel").outerHeight();
+	if (hieghtText>200) {
+		$(".panel").find('.button-read').addClass('active')
+		$('#toggle').click(function() {
+			var elem = $("#toggle").text();
+			if (elem == "Xem thêm") {
+				$("#toggle").text("Thu gọn");
+				$('.ri-arrow-down-line').addClass('active')
+				$(".panel").find('.article').addClass('active')
+			} else {
+				$("#toggle").text("Xem thêm");
+				$('.ri-arrow-down-line').removeClass('active')
+				$(".panel").find('.article').removeClass('active')
+			}
+		});
+	}else{
+		$(".panel").find('.button-read').removeClass('active')
+	}
 }
 
 //Back top top
@@ -460,6 +466,10 @@ function productListSort() {
 	}
 }
 
+function phantrang(){
+	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	// Loading();
 	Cookie();
@@ -482,6 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	detailProjectThumbs();
 	showBackToTop();
 	productListSort();
+	phantrang();
 });
 $(window).resize(function() {
 	if ($(window).width() <= 1024) {

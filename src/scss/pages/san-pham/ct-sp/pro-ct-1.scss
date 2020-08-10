@@ -163,6 +163,14 @@
 						display: flex;
 						align-items: center;
 						justify-content: center;
+						&:hover{
+							border: none;
+							background-color: $main-color;
+							a{
+								color: #fff;
+								transition: all ease-in-out .2s;
+							}
+						}
 					}
 				}
 			}

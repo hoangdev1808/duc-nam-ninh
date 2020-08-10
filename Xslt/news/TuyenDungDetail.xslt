@@ -82,7 +82,16 @@
                     </div>
                     <div class="col-lg-3 col-md-12 col-12 dnn-hr-detail__right">
                         <div class="dnn-hr-detail__right__btn">
-                            <a class="btn btn__apply" href="">ứng tuyển</a>
+                            <a class="btn btn__apply">
+                                <xsl:attribute name="href">
+                                   <xsl:value-of select="/NewsDetail/ApplyUrl" disable-output-escaping="yes"/>
+                                </xsl:attribute>
+                                <xsl:attribute name="title">
+                                    <xsl:value-of select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:value-of select="/NewsDetail/Apply"></xsl:value-of>
+                                <xsl:text>ứng tuyển</xsl:text>
+                            </a>
                             <a class="btn btn__down" href="">tải form ứng tuyển</a>
                         </div>
                         <div class="dnn-hr-detail__right__content">
@@ -94,6 +103,7 @@
                                     <a href="chi-tiet-tuyen-dung.html">
                                         <div class="date">
                                             <span class="material-icons">event_note</span>10.02.2020
+                                        
                                         
                                         
                                         </div>
