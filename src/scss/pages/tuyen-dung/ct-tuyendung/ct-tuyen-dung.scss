@@ -48,9 +48,11 @@
 
 					li {
 						a {
-							color: #fff;
-							font-weight: 900;
-							font-size: 14px;
+							.fa {
+								color: #fff;
+								font-size: 13px;
+							}
+
 						}
 
 						padding: 0 15px;
@@ -89,6 +91,7 @@
 						td {
 							padding: 15px 0;
 							flex: 1;
+
 							span {
 								font-size: 16px;
 								font-family: "Montserrat";
@@ -106,6 +109,7 @@
 								font-size: 14px;
 								font-family: "Montserrat";
 								color: rgb(51, 51, 51);
+								padding-left: 37px;
 							}
 
 							&:nth-child(2) {
@@ -115,30 +119,36 @@
 					}
 				}
 			}
-			&__list{
+
+			&__list {
 				margin-bottom: 50px;
-				p{
+
+				p {
 					font-size: 16px;
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
 					font-weight: bold;
 				}
-				ul{
+
+				ul {
 					padding-top: 25px;
 					padding-left: 0;
 					list-style: none;
-					li{
+
+					li {
 						position: relative;
-						padding-bottom: 25px;
+						padding-bottom: 15px;
 						padding-left: 20px;
-						p{
+
+						p {
 							font-size: 16px;
 							font-family: "Montserrat";
 							color: rgb(51, 51, 51);
 							line-height: 1.5;
 							font-weight: 400;
 						}
-						&::before{
+
+						&::before {
 							content: 'navigate_next';
 							position: absolute;
 							top: 0;
@@ -152,10 +162,12 @@
 			}
 		}
 	}
-	&__right{
+
+	&__right {
 		width: 100%;
-		&__btn{
-			.btn__apply{
+
+		&__btn {
+			.btn__apply {
 				background-color: rgb(233, 0, 6);
 				width: 100%;
 				height: 40px;
@@ -167,7 +179,8 @@
 				text-transform: uppercase;
 				margin-bottom: 20px;
 			}
-			.btn__down{
+
+			.btn__down {
 				width: 100%;
 				height: 40px;
 				border-radius: 0;
@@ -179,12 +192,15 @@
 				border: solid 1px $main-color
 			}
 		}
-		&__content{
+
+		&__content {
 			padding-top: 60px;
-			.block-title{
+
+			.block-title {
 				margin-bottom: 0;
 				width: 100px;
-				h1{
+
+				h1 {
 					font-size: 18px;
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
@@ -193,13 +209,16 @@
 					border-bottom: solid 3px $main-color;
 				}
 			}
-			&__list{
+
+			&__list {
 				padding-left: 0;
 				list-style: none;
-				&__item{
-					padding: 20px 0;
+
+				&__item {
+					padding: 15px 0;
 					border-bottom: solid 1px #f1f1f1;
-					.date{
+
+					.date {
 						display: flex;
 						align-items: center;
 						font-size: 14px;
@@ -207,19 +226,23 @@
 						color: rgb(153, 153, 153);
 						line-height: 20px;
 						padding-bottom: 15px;
-						.material-icons{
+					
+						.material-icons {
 							font-size: 16px;
 							color: rgb(153, 153, 153);
+							padding-right: 10px;
 						}
 					}
-					h2{
+
+					h2 {
 						font-size: 14px;
 						font-family: "Montserrat";
 						color: rgb(51, 51, 51);
 						font-weight: bold;
 					}
-					&:hover{
-						h2{
+
+					&:hover {
+						h2 {
 							color: $main-color
 						}
 					}

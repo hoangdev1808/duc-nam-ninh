@@ -126,7 +126,7 @@
 			padding-left: 15px;
 
 			&::placeholder {
-				font-size: 14px;
+				font-size: 16px;
 			}
 		}
 
@@ -191,7 +191,7 @@
 				position: relative;
 				span{
 					position: absolute;
-					bottom: -10px;
+					bottom: -30px;
 					left: 0;
 				}
 				img {
@@ -349,7 +349,7 @@
 
 .map-wrapper {
 	width: 100%;
-	height: 63.7vh;
+	height:63.985vh;
 	padding-top: 0;
 
 	iframe {

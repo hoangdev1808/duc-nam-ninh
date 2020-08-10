@@ -13,10 +13,10 @@
                     <thead>
                         <tr>
                             <th class="text-center" scope="col">STT</th>
-                            <th class="text-center" scope="col">Vị trí ứng tuyển</th>
-                            <th class="text-center" scope="col">Số lượng</th>
-                            <th class="text-center" scope="col">Khu vực</th>
-                            <th class="text-center" scope="col">Thời hạn</th>
+                            <th class="text-center" scope="col">VỊ TRÍ</th>
+                            <th class="text-center" scope="col">SỐ LƯỢNG</th>
+                            <th class="text-center" scope="col">KHU VỰC</th>
+                            <th class="text-center" scope="col">HẠN NỘP</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -9,11 +9,15 @@
                 <div class="row">
                     <div class="col-lg-9 col-md-12 col-12 dnn-hr-detail__left">
                         <div class="block-title">
-                            <h1>Nhân viên kỹ thuật dịch vụ</h1>
+                            <h1>
+                                <xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
+                                <xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
+                            </h1>
                         </div>
                         <div class="dnn-hr-detail__left__timeline">
                             <div class="time">
-                                <span class="material-icons">event_note</span>05.05.2020
+                                <span class="material-icons">event_note</span>
+                                <xsl:value-of select="/NewsDetail/CreatedDate"></xsl:value-of>
                             </div>
                             <div class="icon-social">
                                 <ul>
@@ -23,67 +27,23 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <i class="fa fa-facebook"></i>
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text disable-output-escaping="yes">
+														https://www.facebook.com/sharer/sharer.php?u=
+													</xsl:text>
+                                                <xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullUrl"></xsl:value-of>
+                                            </xsl:attribute>
+                                            <em class="fa fa-facebook"></em>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="dnn-hr-detail__left__content">
-                            <table class="table table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <i class="ri-coins-fill"></i>
-                                            <span>Thu nhập</span>
-                                            <p>5.000.000 - 8.000.000 đồng / tháng (thưởng KPI, phụ cấp + thưởng doanh số hàng tháng)</p>
-                                        </td>
-                                        <td>
-                                            <i class="ri-plane-line"></i>
-                                            <span>Du lịch</span>
-                                            <p>Nghỉ mát hàng năm, khám sức khoẻ định kì</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <i class="ri-award-fill"></i>
-                                            <span>Thưởng</span>
-                                            <p>Thưởng các ngày lễ, tết, kỷ niệm thành lập Công ty</p>
-                                        </td>
-                                        <td>
-                                            <i class="ri-user-add-fill"></i>
-                                            <span>Tăng lương</span>
-                                            <p>Xem xét tăng lương định kỳ hàng năm</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <i class="ri-gift-2-line"></i>
-                                            <span>Quà tặng</span>
-                                            <p>Quà tặng các dịp sinh nhật, tết trung thu, lễ giáng sinh, thăm ốm, hiếu hỉ...</p>
-                                        </td>
-                                        <td>
-                                            <i class="ri-briefcase-2-fill"></i>
-                                            <span>Đào tạo</span>
-                                            <p>Được đào tạo về kỹ năng giao tiếp, kỹ năng bán hàng</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <i class="ri-first-aid-kit-fill"></i>
-                                            <span>Chế độ</span>
-                                            <p>Tham gia BHXH, BHYT, BHTN, BH tai nạn 24 / 24</p>
-                                        </td>
-                                        <td>
-                                            <i class="ri-footprint-fill"></i>
-                                            <span>Cơ hội thăng tiến</span>
-                                            <p>Có cơ hội thăng tiến, môi trường làm việc sang trọng, lịch sự, đồng nghiệp thân thiện </p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <xsl:value-of disable-output-escaping="yes" select="/NewsDetail/Fullcontent"></xsl:value-of>
                         </div>
+                        <xsl:apply-templates select="/NewsDetail/NewsAttributes"></xsl:apply-templates>
                         <div class="dnn-hr-detail__left__content__list">
                             <p>Mô tả công việc</p>
                             <ul>
@@ -119,29 +79,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="dnn-hr-detail__left__content__list">
-                            <p>Yêu cầu công việc</p>
-                            <ul>
-                                <li>
-                                    <p>Nam / nữ từ 18-28 tuổi. Ngoại hình dễ nhìn, giọng nói dễ nghe (Hạn chế sinh viên, vướng bận lịch học)</p>
-                                </li>
-                                <li>
-                                    <p>Tối thiểu: Tốt nghiệp THPT. Ưu tiên tốt nghiệp TH, CĐ các ngành kinh doanh, cơ khí</p>
-                                </li>
-                                <li>
-                                    <p>Ưu tiên có kiến thức về cơ khí khuôn đúc</p>
-                                </li>
-                                <li>
-                                    <p>Giao tiếp với khách hàng hiệu quả, tư vấn và thuyết phục tốt. </p>
-                                </li>
-                                <li>
-                                    <p>Nắm bắt nhanh kiến thức về hàng hoá cty</p>
-                                </li>
-                                <li>
-                                    <p>Ưu tiên biết giao tiếp tiếng Anh.</p>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="col-lg-3 col-md-12 col-12 dnn-hr-detail__right">
                         <div class="dnn-hr-detail__right__btn">
@@ -157,42 +94,13 @@
                                     <a href="chi-tiet-tuyen-dung.html">
                                         <div class="date">
                                             <span class="material-icons">event_note</span>10.02.2020
+                                        
+                                        
                                         </div>
                                         <h2>Chuyên viên kế toán thuế</h2>
                                     </a>
                                 </li>
-                                <li class="dnn-hr-detail__right__content__list__item">
-                                    <a href="chi-tiet-tuyen-dung.html">
-                                        <div class="date">
-                                            <span class="material-icons">event_note</span>10.02.2020
-                                        </div>
-                                        <h2>Chuyên viên kế toán thuế</h2>
-                                    </a>
-                                </li>
-                                <li class="dnn-hr-detail__right__content__list__item">
-                                    <a href="chi-tiet-tuyen-dung.html">
-                                        <div class="date">
-                                            <span class="material-icons">event_note</span>10.02.2020
-                                        </div>
-                                        <h2>Chuyên viên kế toán thuế</h2>
-                                    </a>
-                                </li>
-                                <li class="dnn-hr-detail__right__content__list__item">
-                                    <a href="chi-tiet-tuyen-dung.html">
-                                        <div class="date">
-                                            <span class="material-icons">event_note</span>10.02.2020
-                                        </div>
-                                        <h2>Chuyên viên kế toán thuế</h2>
-                                    </a>
-                                </li>
-                                <li class="dnn-hr-detail__right__content__list__item">
-                                    <a href="chi-tiet-tuyen-dung.html">
-                                        <div class="date">
-                                            <span class="material-icons">event_note</span>10.02.2020
-                                        </div>
-                                        <h2>Chuyên viên kế toán thuế</h2>
-                                    </a>
-                                </li>
+                                <xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
                             </ul>
                         </div>
                     </div>

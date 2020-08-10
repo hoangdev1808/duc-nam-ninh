@@ -29,7 +29,7 @@
                                                 <xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
                                                 <xsl:value-of select="/NewsDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
                                             </xsl:attribute>
-                                            <i class="fa fa-facebook"></i>
+                                            <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
@@ -38,7 +38,7 @@
                                                 <xsl:text>https://twitter.com/home?status=</xsl:text>
                                                 <xsl:value-of select="/NewsDetail/FullUrl" disable-output-escaping="yes"></xsl:value-of>
                                             </xsl:attribute>
-                                            <i class="fa fa-twitter"></i>
+                                            <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>
                                 </ul>
