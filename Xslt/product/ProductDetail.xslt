@@ -82,6 +82,11 @@
                             <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Title"></xsl:apply-templates>
                         </ul>
                         <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Content"></xsl:apply-templates>
+                        <div class="button-read">
+                            <div id="toggle">Xem thêm
+                                <em class='ri-arrow-down-line'></em>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,10 +175,6 @@
             </xsl:if>
             <div class="article">
                 <xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
-                <div class="button-read">
-                    <div id="toggle">Xem thêm</div>
-                    <em class="ri-arrow-down-line"></em>
-                </div>
             </div>
         </div>
     </xsl:template>

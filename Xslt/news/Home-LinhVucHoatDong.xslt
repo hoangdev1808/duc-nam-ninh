@@ -40,7 +40,7 @@
                     <div class="dnn-home4__content__img__desc">
                         <a>
                             <xsl:attribute name="href">
-                                <xsl:value-of select="Url"></xsl:value-of>
+                                <xsl:text>javascript:void(0)</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
@@ -69,7 +69,7 @@
                     <div class="dnn-home4__content__img__desc">
                         <a>
                             <xsl:attribute name="href">
-                                <xsl:value-of select="Url"></xsl:value-of>
+                                <xsl:text>javascript:void(0)</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>
@@ -98,7 +98,7 @@
                     <div class="dnn-home4__content__img__desc">
                         <a>
                             <xsl:attribute name="href">
-                                <xsl:value-of select="Url"></xsl:value-of>
+                                <xsl:text>javascript:void(0)</xsl:text>
                             </xsl:attribute>
                             <xsl:attribute name="title">
                                 <xsl:value-of select="Title"></xsl:value-of>

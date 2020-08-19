@@ -84,13 +84,15 @@
                             </img>
                         </div>
                         <div class="dnn-news-detail__other__list__item__desc">
-                            <div class="date">
-                                <span class="material-icons">event_note</span>
-                                <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
+                            <div>
+                                <div class="date">
+                                    <span class="material-icons">event_note</span>
+                                    <xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
+                                </div>
+                                <p>
+                                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                </p>
                             </div>
-                            <p>
-                                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                            </p>
                         </div>
                     </a>
                 </li>

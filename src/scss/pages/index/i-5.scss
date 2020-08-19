@@ -3,6 +3,9 @@
 	width: 100%;
 	background-color: $main-color;
 	&__content{
+		.row{
+			justify-content: center;
+		}
 		.block-title{
 			text-align: center;
 			h1{
@@ -12,7 +15,7 @@
 		&__item{
 			background-color: $color-while;
 			width: 190px;
-			height: 300px;
+			height: 365px;
 			padding-top: 30px;
 			&__img{
 				position: relative;
@@ -55,8 +58,10 @@
 				margin-bottom: 30px;
 			}
 			@media screen and ( max-width: 1024px){
-				height: 250px;
 				padding: 30px;
+			}
+			@media screen and ( max-width: 575px){
+				height: 255px;
 			}
 		}
 	}

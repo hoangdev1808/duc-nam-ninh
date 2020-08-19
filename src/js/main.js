@@ -1,13 +1,13 @@
-import Loading from "./lib/Loading";
-import Cookie from "./lib/Cookie";
-import MoveElement from "./lib/MoveElement"
+import Loading from './lib/Loading';
+import Cookie from './lib/Cookie';
+import MoveElement from './lib/MoveElement'
 
 //Toggle menu mobile
 const toggleMenuMobile = () => {
-	$(".header-container__toggle-menu").on("click", function() {
-		$(this).toggleClass("active");
-		$(this).siblings(".header-container__main-nav").toggleClass("active");
-		$("body").toggleClass("disabled");
+	$('.header-container__toggle-menu').on('click', function() {
+		$(this).toggleClass('active');
+		$(this).siblings('.header-container__main-nav').toggleClass('active');
+		$('body').toggleClass('disabled');
 	});
 };
 
@@ -24,12 +24,12 @@ function moveNav() {
 
 //Header when scroll
 const activeHeaderWhenScroll = () => {
-	const heightHeader = document.querySelector("header").offsetHeight;
-	window.addEventListener("scroll", function() {
+	const heightHeader = document.querySelector('header').offsetHeight;
+	window.addEventListener('scroll', function() {
 		if (window.pageYOffset >= heightHeader) {
-			document.querySelector("header").classList.add("header-croll-down");
+			document.querySelector('header').classList.add('header-croll-down');
 		} else {
-			document.querySelector("header").classList.remove("header-croll-down");
+			document.querySelector('header').classList.remove('header-croll-down');
 		}
 	});
 };
@@ -48,9 +48,9 @@ function dnnBannerSlide() {
 		mousewheelControl: true,
 		keyboardControl: true,
 		navigation: {
-			nextEl: ".dnn-home-banner__slide .swiper-button-next",
-			prevEl: ".dnn-home-banner__slide .swiper-button-prev",
-			type: "bullets",
+			nextEl: '.dnn-home-banner__slide .swiper-button-next',
+			prevEl: '.dnn-home-banner__slide .swiper-button-prev',
+			type: 'bullets',
 			clickable: true
 		},
 		on: {
@@ -60,22 +60,22 @@ function dnnBannerSlide() {
 					var slideProgress = swiper.slides[i].progress;
 					var innerOffset = swiper.width * 0.5;
 					var innerTranslate = slideProgress * innerOffset;
-					swiper.slides[i].querySelector(".swiper-inner").style.transform =
-						"translate3d(" + innerTranslate + "px, 0, 0)";
+					swiper.slides[i].querySelector('.swiper-inner').style.transform =
+						'translate3d(' + innerTranslate + 'px, 0, 0)';
 				}
 			},
 			touchStart: function() {
 				var swiper = this;
 				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = "";
+					swiper.slides[i].style.transition = '';
 				}
 			},
 			setTransition: function(speed) {
 				var swiper = this;
 				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = speed + "ms";
-					swiper.slides[i].querySelector(".swiper-inner").style.transition =
-						speed + "ms";
+					swiper.slides[i].style.transition = speed + 'ms';
+					swiper.slides[i].querySelector('.swiper-inner').style.transition =
+						speed + 'ms';
 				}
 			}
 		}
@@ -125,7 +125,7 @@ function dnnBannerSlide() {
 	});
 	var thesameproduct = new Swiper('.dnn-detail__list .dnn-detail__list__slide', {
 		slidesPerView: 4,
-		spaceBetween: 30,
+		spaceBetween: 20,
 		loop: true,
 		speed: 1000,
 		// autoplay: {
@@ -152,7 +152,7 @@ function dnnBannerSlide() {
 	});
 	var otherproduct = new Swiper('.dnn-detail__list__other .dnn-detail__list__other__slide', {
 		slidesPerView: 4,
-		spaceBetween: 30,
+		spaceBetween: 20,
 		loop: true,
 		speed: 1000,
 		// autoplay: {
@@ -341,10 +341,14 @@ function tabsDescription() {
 
 function hideTool() {
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 50) {
-			$("#block__tool").addClass("active");
+		if ($(window).width() <= 768) {
+			$('#block__tool').removeClass('active');
 		} else {
-			$("#block__tool").removeClass("active");
+			if ($(this).scrollTop() > 50) {
+				$('#block__tool').addClass('active');
+			} else {
+				$('#block__tool').removeClass('active');
+			}
 		}
 	});
 }
@@ -356,19 +360,19 @@ function DataBG() {
 }
 
 function setBackground() {
-	$("[setBackground]").each(function() {
-		var background = $(this).attr("setBackground");
+	$('[setBackground]').each(function() {
+		var background = $(this).attr('setBackground');
 		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-size": "cover",
-			"background-position": "center center",
+			'background-image': 'url(' + background + ')',
+			'background-size': 'cover',
+			'background-position': 'center center',
 		});
 	});
-	$("[setBackgroundRepeat]").each(function() {
-		var background = $(this).attr("setBackgroundRepeat");
+	$('[setBackgroundRepeat]').each(function() {
+		var background = $(this).attr('setBackgroundRepeat');
 		$(this).css({
-			"background-image": "url(" + background + ")",
-			"background-repeat": "no-repeat",
+			'background-image': 'url(' + background + ')',
+			'background-repeat': 'no-repeat',
 		});
 	});
 }
@@ -386,16 +390,20 @@ function moveSelect() {
 
 //Check banner
 const checkLayoutBanner = () => {
-	const pagesBanner = $("#page-banner");
+	const pagesBanner = $('#page-banner');
 	const breadcrumb = $('.global-breadcrumb');
-	const heightHeader = $("header").outerHeight();
-	if (pagesBanner.length < 1) {
-		$("header").css({
-			"margin-top": "0",
-			"background-color": "#fff"
+	const heightHeader = $('header').outerHeight();
+	if ((pagesBanner.length < 1)) {
+		$('header').css({
+			'margin-top': '0',
+			'background-color': '#fff'
 		});
-		breadcrumb.css("padding-top", heightHeader);
+		breadcrumb.css({
+			'display': 'block',
+			'padding-top': heightHeader
+		});
 	}
+	pagesBanner.insertBefore(breadcrumb)
 };
 
 function listFilter() {
@@ -417,24 +425,23 @@ function listFilter() {
 
 //Read more article
 function readMore() {
-	var hieghtText = $(".panel").outerHeight();
-	if (hieghtText>200) {
-		$(".panel").find('.button-read').addClass('active')
-		$('#toggle').click(function() {
-			var elem = $("#toggle").text();
-			if (elem == "Xem thêm") {
-				$("#toggle").text("Thu gọn");
-				$('.ri-arrow-down-line').addClass('active')
-				$(".panel").find('.article').addClass('active')
-			} else {
-				$("#toggle").text("Xem thêm");
-				$('.ri-arrow-down-line').removeClass('active')
-				$(".panel").find('.article').removeClass('active')
-			}
-		});
-	}else{
-		$(".panel").find('.button-read').removeClass('active')
+	var articleheight = $('.panel').find('.article').height();
+	$('.button-read').addClass('active')
+	if(articleheight.length<1){
+		$('.button-read').removeClass('active')
 	}
+	$('.button-read').find('#toggle').click(function(e) {
+		e.preventDefault();
+		if ($('.panel').hasClass('paneled')) {
+			$('.panel').removeClass('paneled');
+			$('.panel').attr('style', '');
+			$('#toggle').html("Xem Thêm"+"<em class='ri-arrow-down-line'></em>");
+		} else {
+			$('.panel').addClass('paneled');
+			$('.panel').css('max-height', articleheight+40);
+			$('#toggle').html("Thu gọn"+"<em class='ri-arrow-up-line'></em>");
+		}
+	});
 }
 
 //Back top top
@@ -447,26 +454,26 @@ function showBackToTop() {
 		}
 	});
 
-	$("#back-to-top").on("click", function(e) {
+	$('#back-to-top').on('click', function(e) {
 		e.preventDefault();
-		$("html,body").animate({
+		$('html,body').animate({
 			scrollTop: 0
 		})
 	})
 }
 
 function productListSort() {
-	if ($(window).width() <= 767) {
-		$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').addClass('active');
+	if ($(window).width() <= 1024) {
+		// $('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').addClass('active');
 		$('.dnn-list-pro2__content__left__title').on('click', function() {
 			$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').slideToggle('active');
 		})
-	}else{
+	} else {
 		$('.dnn-list-pro2__content__left').find('.dnn-list-pro2__content__left__list').removeClass('active');
 	}
 }
 
-function phantrang(){
+function phantrang() {
 	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
 }
 
@@ -502,5 +509,5 @@ $(window).resize(function() {
 		$('.language').appendTo('.nav-item #language-desktop');
 		$('.search').appendTo('.nav-item #search-desktop');
 	}
-	
+
 })

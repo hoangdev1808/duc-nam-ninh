@@ -159,6 +159,10 @@
 			line-height: 1.75;
 			text-align: center;
 		}
+		@media screen and ( max-width: 1024px){
+			padding: 15px;
+			min-height: unset;
+		}
 	}
 }
 

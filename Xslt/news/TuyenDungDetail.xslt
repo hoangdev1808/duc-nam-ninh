@@ -22,7 +22,13 @@
                             <div class="icon-social">
                                 <ul>
                                     <li>
-                                        <a href="">
+                                        <a>
+                                            <xsl:attribute name="href">
+                                                <xsl:text disable-output-escaping="yes">
+													https://twitter.com/home?status=
+												</xsl:text>
+                                                <xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullUrl"></xsl:value-of>
+                                            </xsl:attribute>
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                     </li>

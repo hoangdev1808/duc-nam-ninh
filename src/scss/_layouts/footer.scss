@@ -4,19 +4,22 @@ footer{
 	background-size: cover;
 	margin-left: auto;
 	width: 100%;
+	border-top: solid 5px #fff;
 	.footer-block{
 		position: relative;
 		padding-top: 60px;
 		.footer-card{
 			width: 100%;
-			padding-bottom: 40px;
+			@media screen and ( max-width: 1024px){
+				padding-bottom: 40px;
+			}
 			&:nth-child(2){
 				padding-left: 105px;
 				@media screen and ( max-width: 575px){
 					display: inline-block !important;
 				}
 				@media screen and ( max-width: 1024px){
-					padding-left: 0;
+					padding-left: 15px;
 				}
 			}
 			.card__title{
@@ -117,9 +120,14 @@ footer{
 				}
 			}
 			.subscribe{
+				padding: 30px 0;
+				.alert{
+					margin-bottom: 0;
+					height: 100%;
+					border-radius: 0;
+				}
 				.subscribefrm{
 					position: relative;
-					padding: 30px 0;
 					display: flex;
 					align-items: center;
 					.subscribeemail{
@@ -131,13 +139,14 @@ footer{
 						border: none;
 						color: rgb(102, 102, 102);
 						padding-left: 15px;
+						padding-right: 0;
 						&::placeholder{
 							font-size: 14px;
 							font-family: "Montserrat";
 							color: rgb(102, 102, 102);
 							line-height: 1.429;
 						}
-						@media screen and ( max-width: 575px){
+						@media screen and ( max-width: 768px){
 							width: 100%;
 						}
 					}
@@ -151,10 +160,14 @@ footer{
 						height: 50px;
 						border: none;
 						outline: none;
+						padding-right: 0;
 						.ri-arrow-right-line{
 							font-size: 30px;
 						}
 						@media screen and ( max-width: 768px){
+							position: absolute;
+							right: 0;
+							top: 0;
 							width: 40px;
 							font-size: 11px !important;
 						}
@@ -197,11 +210,14 @@ footer{
 							&:first-child{
 								margin-left: 0;
 							}
-							margin-left: 15px;
+							margin-left: auto;
 						}
 					}
 					@media(max-width: 768px){
 						justify-content: flex-start;
+						li{
+							margin-left: auto;
+						}
 					}
 				}
 			}
@@ -217,14 +233,14 @@ footer{
 	.copyright{
 		width: 100%;
 		padding-top: 15px;
-		padding-bottom: 30px;
 		p{
 			font-size: 12px;
 			font-family: "Montserrat";
 			color: rgba(255, 255, 255, 0.502);
 			line-height: 2.5;
 			@media screen and ( max-width: 768px){
-				font-size: 11px !important;
+				font-size: 10px;
+				text-align: center;
 			}
 		}
 		ul{
@@ -258,6 +274,17 @@ footer{
 					line-height: 2;
 					text-decoration: none;
 				}
+			}
+			@media screen and ( max-width: 768px){
+				li{
+					padding: 0 7px;
+					a{
+						font-size: 10px;
+					}
+				}
+			}
+			@media screen and ( max-width: 768px){
+				justify-content: center;
 			}
 		}
 	}

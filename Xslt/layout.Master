@@ -48,8 +48,9 @@
 						</div>
 					</div>
 				</header>
+				
 				<main class="main">
-					<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
+				<asp:Panel ID="divAlt1" runat="server" CssClass="altcontent1">
 						<asp:ContentPlaceHolder ID="altContent1" runat="server">
 						</asp:ContentPlaceHolder>
 					</asp:Panel>
@@ -76,7 +77,7 @@
 								<div class="col-md-4 col-sm-6 col-12 footer-card">
                                     <portal:modulewrapper id="mdl142" runat="server" configuremoduleid="142" />
 								</div>
-								<div class="col-md-4 col-sm-6 col-12 footer-card d-flex justify-content-center">
+								<div class="col-md-4 col-sm-6 col-12 footer-card">
 									<div>
 										<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
 									</div>
@@ -112,17 +113,8 @@
 						</div>
 					</div>
 				</footer>
-				<portal:modulewrapper id="mdl213" runat="server" configuremoduleid="213" />
+				<portal:modulewrapper id="mdl217" runat="server" configuremoduleid="217" />
 				<div id="back-to-top"><img src="/Data/Sites/1/skins/default/assets/icons/gototop.png" alt="" srcset=""></div>
-				<div class="searchbox" id="searchfancybox" style="display: none;">
-					<div class="container">
-						<div class="content">
-							<div class="form-group">
-                                <portal:modulewrapper id="mdl141" runat="server" configuremoduleid="141" />
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
 				<div class="row">
@@ -155,6 +147,15 @@
 				</div>
 			</portal:AutoHidePanel>
 			<portal:Woopra ID="woopra11" runat="server" />
+			<div class="searchbox" id="searchfancybox" style="display: none;">
+				<div class="container">
+						<div class="content">
+						<div class="form-group">
+							<portal:modulewrapper id="mdl141" runat="server" configuremoduleid="141" />
+						</div>
+					</div>
+				</div>
+			</div>
 		</form>
 		<script src="/Data/Sites/1/skins/default/js/core.min.js"></script>
 		<script src="/Data/Sites/1/skins/default/js/main.min.js"></script>

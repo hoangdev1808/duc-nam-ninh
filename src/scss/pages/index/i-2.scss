@@ -7,13 +7,13 @@
 		padding: 0;
 		&__img{
 			cursor: pointer;
-			max-width: 960px;
+			max-width: 100%;
 			height: 600px;
 			img{
 				width: 100%;
 				height: 100%;
 			}
-			@media screen and ( max-width: 1200px){
+			@media screen and ( max-width: 1440px){
 				max-width: 100%;
 				height: auto;
 			}
@@ -83,11 +83,12 @@
 				width: 100%;
 			}
 		}
-		@media screen and ( max-width: 1024px){
+		@media screen and ( max-width: 1199px){
 			order: 1;
 			margin-bottom: 20px;
 			&__content{
 				width: 100%;
+				padding: 15px 0;
 				&__desc{
 					padding-right: 15px;
 					max-height: 155px;

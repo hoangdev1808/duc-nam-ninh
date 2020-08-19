@@ -16,6 +16,7 @@
                 <a class="btn btn__new">
                     <xsl:attribute name="href">
                         <xsl:value-of select="Url"></xsl:value-of>
+                        <xsl:text>/tin-tuc/tin-nganh-nghe</xsl:text>
                     </xsl:attribute>
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
