@@ -20,13 +20,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+                        <xsl:apply-templates select="/NewsList/News" mode="desktop"></xsl:apply-templates>
                     </tbody>
                 </table>
+                <div class="dnn-hr-v-mobile row">
+                    <xsl:apply-templates select="/NewsList/News" mode="mobile"></xsl:apply-templates>
+                </div>
             </div>
         </section>
     </xsl:template>
-    <xsl:template match="News">
+    <xsl:template match="News" mode="desktop">
         <tr>
             <th class="text-center" scope="row">
                 <xsl:value-of select="position()"></xsl:value-of>
@@ -53,5 +56,56 @@
                 <xsl:value-of select="CreatedDate"></xsl:value-of>
             </td>
         </tr>
+    </xsl:template>
+    <xsl:template match="News" mode="mobile">
+        <div class="col-md-6">
+            <a class="item">
+                <xsl:attribute name="href">
+                    <xsl:value-of select="Url"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
+                <h2>
+                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+                </h2>
+                <p>
+                    <em class="mdi mdi-account-group"></em>
+                    <span>
+                        <xsl:text>Số lượng: </xsl:text>
+                        <xsl:value-of select="SubTitle"></xsl:value-of>
+                    </span>
+                </p>
+                <p>
+                    <em class="mdi mdi-map-marker"></em>
+                    <span>
+                        <xsl:text>Khu vực: </xsl:text>
+                        <xsl:value-of select="BriefContent"></xsl:value-of>
+                    </span>
+                </p>
+                <p>
+                    <em class="mdi mdi-clock-start"></em>
+                    <span>
+                        <xsl:text>Ngày bắt đầu: </xsl:text>
+                        <xsl:value-of select="CreatedDate"></xsl:value-of>
+                    </span>
+                </p>
+                <p>
+                    <em class="mdi mdi-clock-end"></em>
+                    <span>
+                        <xsl:text>Ngày kết thúc: </xsl:text>31/06/2020
+                        
+                        
+                    
+                    
+                    
+                    
+                    
+                    </span>
+                </p>
+                <div class="btn-view">Xem chi tiết</div>
+            </a>
+        </div>
     </xsl:template>
 </xsl:stylesheet>

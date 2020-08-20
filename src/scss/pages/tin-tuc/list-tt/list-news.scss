@@ -18,6 +18,9 @@
 
 	.block-title {
 		margin-bottom: 30px;
+		@media screen and ( max-width: 375px){
+			margin-bottom: 20px;
+		}
 	}
 
 	&__list {
@@ -39,7 +42,8 @@
 					font-size: 18px;
 					font-family: "Montserrat";
 					color: rgb(51, 51, 51);
-					@media screen and ( max-width: 1024px){
+
+					@media screen and (max-width: 1024px) {
 						font-size: 14px;
 					}
 				}
@@ -58,6 +62,19 @@
 
 				}
 			}
+
+			@media screen and (max-width: 375px) {
+				flex-direction: column;
+				align-items: flex-start;
+
+				li {
+					margin-left: 0;
+				}
+
+			}
+		}
+		@media screen and ( max-width: 768px){
+			margin-bottom: 15px;
 		}
 	}
 
@@ -65,6 +82,7 @@
 		cursor: pointer;
 		width: 100%;
 		margin-bottom: 30px;
+
 		&__img {
 			width: 100%;
 			height: 350px;
@@ -78,10 +96,12 @@
 				transform: scale(1.1);
 				transition: all ease-in-out .3s;
 			}
-			@media screen and ( max-width: 767px){
+
+			@media screen and (max-width: 767px) {
 				height: unset;
 			}
 		}
+
 		&__desc {
 			transition: all ease-in-out .3s;
 			box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
@@ -132,44 +152,51 @@
 				}
 			}
 		}
-		&:hover{
-			.dnn-news2__item__img{
-				img{
+
+		&:hover {
+			.dnn-news2__item__img {
+				img {
 					transform: scale(1);
 					transition: all ease-in-out .3s;
 				}
 			}
-			.dnn-news2__item__desc{
+
+			.dnn-news2__item__desc {
 				background-color: $main-color;
 				transition: all ease-in-out .3s;
-				.dnn-news2__item__desc__date{
+
+				.dnn-news2__item__desc__date {
+
 					.material-icons,
-					.date{
+					.date {
 						color: $color-while;
 					}
 				}
-				.dnn-news2__item__desc__title{
-					a{
+
+				.dnn-news2__item__desc__title {
+					a {
 						color: $color-while;
 						text-decoration: underline;
 					}
 				}
 			}
 		}
+
 		&:nth-child(3),
 		&:nth-child(4),
 		&:nth-child(5),
 		&:nth-child(6),
 		&:nth-child(7),
-		&:nth-child(8){
-			.dnn-news2__item__desc{
-				.dnn-news2__item__desc__title{
-					a{
+		&:nth-child(8) {
+			.dnn-news2__item__desc {
+				.dnn-news2__item__desc__title {
+					a {
 						font-size: 16px;
 					}
 				}
 			}
-			.dnn-news2__item__img{
+
+			.dnn-news2__item__img {
 				height: 230px;
 			}
 		}

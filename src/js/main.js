@@ -267,16 +267,22 @@ function detailProjectThumbs() {
 		spaceBetween: 30,
 		slidesPerView: 5,
 		loop: true,
-		slideToClickedSlide: true
+		slideToClickedSlide: true,
+		breakpoints: {
+			575: {
+				slidesPerView: 4,
+				spaceBetween: 10,
+			}
+		},
 	});
 	var galleryTop = new Swiper('.dnn-project-detail1__content__slide .dnn-project-detail1__content__slide__gallery-top', {
 		spaceBetween: 10,
 		loop: true,
 		speed: 2500,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
 		thumbs: {
 			swiper: galleryThumbs,
 		},
@@ -427,9 +433,6 @@ function listFilter() {
 function readMore() {
 	var articleheight = $('.panel').find('.article').height();
 	$('.button-read').addClass('active')
-	if(articleheight.length<1){
-		$('.button-read').removeClass('active')
-	}
 	$('.button-read').find('#toggle').click(function(e) {
 		e.preventDefault();
 		if ($('.panel').hasClass('paneled')) {
