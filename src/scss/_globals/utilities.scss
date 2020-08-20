@@ -1058,6 +1058,12 @@ textarea {
 					.form-control {
 						height: 40px;
 						border-radius: 0;
+						&:focus{
+							outline: none;
+							box-shadow: none;
+							border-color: transparent;
+						}
+							
 					}
 
 					.seachpage-btn {
