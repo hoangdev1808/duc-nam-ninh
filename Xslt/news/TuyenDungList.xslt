@@ -53,7 +53,7 @@
                 <xsl:value-of select="BriefContent"></xsl:value-of>
             </td>
             <td class="text-center">
-                <xsl:value-of select="CreatedDate"></xsl:value-of>
+                <xsl:value-of select="EndDate"></xsl:value-of>
             </td>
         </tr>
     </xsl:template>
@@ -94,14 +94,8 @@
                 <p>
                     <em class="mdi mdi-clock-end"></em>
                     <span>
-                        <xsl:text>Ngày kết thúc: </xsl:text>31/06/2020
-                        
-                        
-                    
-                    
-                    
-                    
-                    
+                        <xsl:text>Ngày kết thúc: </xsl:text>
+                        <xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of>
                     </span>
                 </p>
                 <div class="btn-view">Xem chi tiết</div>

@@ -37,16 +37,10 @@
                                 <xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FullContent"></xsl:value-of>
                             </div>
                             <div class="dnn-detail1__content__product-detail__contact">
-                                <a class="btn btn__contact">
-                                    <xsl:attribute name="href">
-                                        <xsl:value-of select="Url"></xsl:value-of>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="title">
-                                        <xsl:value-of select="Title"></xsl:value-of>
-                                    </xsl:attribute>
+                                <a class="btn btn__contact" href="http://preview9748.canhcam.com.vn/lien-he">
                                     <xsl:text>
-                                Liên hệ
-                            </xsl:text>
+                                        Liên hệ
+                                    </xsl:text>
                                 </a>
                                 <ul>
                                     <li>
@@ -84,6 +78,8 @@
                         <xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Content"></xsl:apply-templates>
                         <div class="button-read">
                             <div id="toggle">Xem thêm
+                                
+                                
                                 <em class='ri-arrow-down-line'></em>
                             </div>
                         </div>

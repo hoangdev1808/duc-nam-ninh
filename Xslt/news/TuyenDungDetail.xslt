@@ -17,7 +17,7 @@
                         <div class="dnn-hr-detail__left__timeline">
                             <div class="time">
                                 <span class="material-icons">event_note</span>
-                                <xsl:value-of select="/NewsDetail/CreatedDate"></xsl:value-of>
+                                <xsl:value-of select="/NewsDetail/EndDate"></xsl:value-of>
                             </div>
                             <div class="icon-social">
                                 <ul>
@@ -54,7 +54,13 @@
                     <div class="col-lg-3 col-md-12 col-12 dnn-hr-detail__right">
                         <div class="dnn-hr-detail__right__btn">
                             <a class="btn btn__apply">
-                                <xsl:attribute name="href">
+                                <xsl:attribute name="data-type">
+                                    <xsl:text>iframe</xsl:text>
+                                </xsl:attribute>
+                                <xsl:attribute name="data-fancybox">
+                                    <xsl:text>Form ứng tuyển</xsl:text>
+                                </xsl:attribute>
+                                <xsl:attribute name="data-src">
                                     <xsl:value-of select="/NewsDetail/ApplyUrl" disable-output-escaping="yes"/>
                                 </xsl:attribute>
                                 <xsl:attribute name="title">
@@ -91,7 +97,7 @@
             <a href="chi-tiet-tuyen-dung.html">
                 <div class="date">
                     <span class="material-icons">event_note</span>
-                    <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
+                    <xsl:value-of disable-output-escaping="yes" select="EndDate"></xsl:value-of>
                 </div>
                 <h2>
                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
