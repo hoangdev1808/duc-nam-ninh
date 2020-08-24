@@ -242,7 +242,21 @@ footer{
 				font-size: 10px;
 				text-align: center;
 			}
+			a{
+				font-size: 12px;
+				font-family: "Montserrat";
+				color: rgba(255, 255, 255, 0.502);
+				line-height: 2.5;
+				&:hover{
+					text-decoration: underline;
+				}
+				@media screen and ( max-width: 768px){
+					font-size: 10px;
+					text-align: center;
+				}
+			}
 		}
+		
 		ul{
 			display: flex;
 			align-items: center;

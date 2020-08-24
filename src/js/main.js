@@ -173,7 +173,7 @@ function dnnBannerSlide() {
 			},
 			480: {
 				slidesPerView: 1,
-				spaceBetween: 0,
+				spaceBetween: 10,
 			}
 		},
 	});
