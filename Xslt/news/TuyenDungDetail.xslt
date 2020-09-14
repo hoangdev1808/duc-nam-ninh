@@ -47,9 +47,9 @@
                             </div>
                         </div>
                         <div class="dnn-hr-detail__left__content">
-                            <xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullContent"></xsl:value-of>
+                            <xsl:apply-templates select="/NewsDetail/NewsAttributes"></xsl:apply-templates>
                         </div>
-                        <xsl:apply-templates select="/NewsDetail/NewsAttributes"></xsl:apply-templates>
+                        <xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullContent"></xsl:value-of>
                     </div>
                     <div class="col-lg-3 col-md-12 col-12 dnn-hr-detail__right">
                         <div class="dnn-hr-detail__right__btn">
